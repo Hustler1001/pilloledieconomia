@@ -1,0 +1,690 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>html,body{margin:0;background:transparent}canvas{display:block}</style>
+<script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js"}}</script>
+</head><body>
+<script type="module">
+import * as THREE from "three";
+const C = (r, g, b) => new THREE.Color().setRGB(r / 255, g / 255, b / 255, THREE.SRGBColorSpace);
+let renderer, scene, camera, root;
+
+function mat(c, o = {}) { return new THREE.MeshStandardMaterial({ color: c, roughness: o.rough ?? 0.62, metalness: 0, transparent: o.alpha != null, opacity: o.alpha ?? 1, side: o.side ?? THREE.FrontSide }); }
+function mk(geom, color, o = {}) {
+  const m = new THREE.Mesh(geom, o.material || mat(color, o));
+  if (o.pos) m.position.set(...o.pos);
+  if (o.scale) m.scale.set(...o.scale);
+  if (o.rot) m.rotation.set(...o.rot);
+  if (o.outline !== false && !o.material) {
+    const ol = new THREE.Mesh(geom, new THREE.MeshBasicMaterial({ color: o.olc || 0x1a1d33, side: THREE.BackSide }));
+    ol.scale.setScalar(1 + (o.olw ?? 0.035)); m.add(ol);
+  }
+  return m;
+}
+const sph = (r = 1, w = 40, h = 28) => new THREE.SphereGeometry(r, w, h);
+
+function wolf(cfg) {
+  const g = new THREE.Group();
+  const fur = C(168, 176, 198), furD = C(130, 138, 164), light = C(244, 247, 252), pink = C(255, 170, 190);
+  // collo/petto
+  g.add(mk(sph(1), C(236, 240, 248), { pos: [0, -1.85, -0.05], scale: [1.15, 0.95, 0.9] }));
+  g.add(mk(sph(1), C(250, 252, 255), { pos: [0, -1.45, 0.45], scale: [0.62, 0.42, 0.4], outline: false }));
+  // testa
+  g.add(mk(sph(1), fur, { pos: [0, 0, 0], scale: [1.25, 1.0, 1.05] }));
+  g.add(mk(sph(1), furD, { pos: [0, 0.55, 0.05], scale: [0.75, 0.5, 0.85], outline: false, alpha: 0.0 }));
+  // orecchie
+  for (const s of [-1, 1]) {
+    const ear = mk(new THREE.ConeGeometry(0.42, 0.95, 24), fur, { pos: [s * 0.78, 0.95, -0.05], rot: [0, 0, -s * 0.28] });
+    ear.add(mk(new THREE.ConeGeometry(0.3, 0.7, 24), pink, { pos: [0, -0.06, 0.12], outline: false }));
+    g.add(ear);
+    // ciuffi sulle guance
+    g.add(mk(new THREE.ConeGeometry(0.2, 0.55, 14), fur, { pos: [s * 1.2, -0.38, 0.1], rot: [0, 0, s * 1.15] }));
+    g.add(mk(new THREE.ConeGeometry(0.17, 0.5, 14), fur, { pos: [s * 1.12, -0.6, 0.15], rot: [0, 0, s * 1.5] }));
+    // guance chiare
+    g.add(mk(sph(1), light, { pos: [s * 0.56, -0.36, 0.62], scale: [0.5, 0.42, 0.42], outline: false }));
+    g.add(mk(sph(1), pink, { pos: [s * 0.72, -0.28, 0.78], scale: [0.2, 0.12, 0.06], outline: false, alpha: 0.65 }));
+  }
+  // muso
+  g.add(mk(sph(1), light, { pos: [0, -0.32, 0.7], scale: [0.62, 0.46, 0.6], outline: false }));
+  g.add(mk(sph(1), C(36, 38, 52), { pos: [0, -0.1, 1.24], scale: [0.2, 0.15, 0.14], outline: false }));
+  g.add(mk(sph(1), C(200, 206, 226), { pos: [-0.05, -0.04, 1.34], scale: [0.06, 0.03, 0.03], outline: false }));
+  // baffi puntini
+  for (const s of [-1, 1]) for (const [x, y] of [[0.3, -0.25], [0.38, -0.34], [0.24, -0.35]])
+    g.add(mk(sph(0.018), C(120, 128, 150), { pos: [s * x, y, 1.18], outline: false }));
+  // occhi
+  const ex = [-0.44, 0.44], ey = 0.2;
+  ex.forEach((x, i) => {
+    const s = i === 0 ? -1 : 1;
+    const eye = new THREE.Group(); eye.position.set(x, ey, 0.9); eye.rotation.y = s * 0.28;
+    if (cfg.blink) {
+      eye.add(mk(new THREE.TorusGeometry(0.17, 0.028, 10, 24, Math.PI), C(44, 48, 68), { rot: [0, 0, Math.PI], pos: [0, 0.05, 0.03], outline: false }));
+    } else {
+      const sy = cfg.expr === "surprised" ? 1.25 : 1.12;
+      eye.add(mk(sph(0.22), C(255, 255, 255), { scale: [1, sy, 0.5], outline: false }));
+      const dx = cfg.expr === "skeptic" ? 0.06 : 0, dy = cfg.expr === "skeptic" ? -0.05 : -0.015;
+      const ir = cfg.expr === "surprised" ? 0.135 : 0.155;
+      eye.add(mk(sph(ir), C(224, 150, 40), { pos: [dx, dy, 0.07], scale: [1, 1, 0.45], outline: false }));
+      eye.add(mk(sph(ir * 0.55), C(22, 22, 34), { pos: [dx, dy, 0.1], scale: [1, 1, 0.5], outline: false }));
+      eye.add(mk(sph(0.045), C(255, 255, 255), { pos: [dx - 0.05, dy + 0.07, 0.13], outline: false }));
+      eye.add(mk(sph(0.025), C(255, 255, 255), { pos: [dx + 0.05, dy - 0.05, 0.13], outline: false }));
+      if (cfg.expr === "skeptic") {
+        const lid = mk(new THREE.SphereGeometry(0.245, 28, 14, 0, Math.PI * 2, 0, Math.PI / 2), fur, { scale: [1, 1.15, 0.6], pos: [0, 0.0, 0.0], outline: false, side: THREE.DoubleSide });
+        eye.add(lid);
+        eye.add(mk(new THREE.TorusGeometry(0.245, 0.02, 8, 30), C(44, 48, 68), { rot: [Math.PI / 2, 0, 0], scale: [1, 1, 1.15], pos: [0, 0, 0.0], outline: false }));
+      } else {
+        eye.add(mk(new THREE.TorusGeometry(0.235, 0.022, 8, 30, Math.PI), C(44, 48, 68), { rot: [0, 0, 0], scale: [1, 1.1, 1], pos: [0, 0.01, 0.06], outline: false }));
+      }
+    }
+    g.add(eye);
+    // sopracciglio
+    let tilt = 0, by = 0.62;
+    if (cfg.expr === "skeptic") { tilt = i === 0 ? 0.12 : -0.38; by = i === 0 ? 0.56 : 0.72; }
+    else if (cfg.expr === "surprised") { tilt = s * -0.12; by = 0.78; }
+    else if (cfg.expr === "worried") { tilt = s * 0.38; by = 0.6; }
+    else if (cfg.expr === "happy") { tilt = s * -0.1; by = 0.66; }
+    const b = mk(new THREE.CapsuleGeometry(0.055, 0.34, 6, 12), C(76, 82, 110), { pos: [x, by, 0.86], rot: [0, s * 0.3, Math.PI / 2 + (tilt * -1) * (s === -1 ? -1 : 1) * 0 + tilt * (s === 1 ? 1 : 1)], outline: false });
+    g.add(b);
+  });
+  // bocca
+  const mc = C(96, 40, 58);
+  if (cfg.mouth) {
+    const w = cfg.expr === "surprised" ? 0.18 : 0.26, h = cfg.expr === "surprised" ? 0.2 : 0.17;
+    g.add(mk(sph(1), C(112, 34, 56), { pos: [0, -0.5, 1.2], scale: [w, h, 0.12], outline: false }));
+    g.add(mk(sph(1), C(244, 132, 158), { pos: [0, -0.58, 1.23], scale: [w * 0.6, h * 0.5, 0.08], outline: false }));
+    if (cfg.expr !== "surprised") for (const s of [-1, 1]) g.add(mk(new THREE.ConeGeometry(0.045, 0.11, 10), C(255, 255, 255), { pos: [s * 0.15, -0.4, 1.25], rot: [Math.PI, 0, 0], outline: false }));
+  } else if (cfg.expr === "skeptic" || cfg.expr === "worried") {
+    g.add(mk(new THREE.TorusGeometry(0.23, 0.026, 8, 24, Math.PI * 0.62), mc, { pos: [0, -0.62, 1.2], rot: [0, 0, Math.PI * 0.19], outline: false }));
+  } else if (cfg.expr === "happy") {
+    g.add(mk(new THREE.TorusGeometry(0.32, 0.03, 8, 30, Math.PI), mc, { pos: [0, -0.4, 1.2], rot: [0, 0, Math.PI], outline: false }));
+  } else {
+    for (const s of [-1, 1]) g.add(mk(new THREE.TorusGeometry(0.11, 0.026, 8, 18, Math.PI), mc, { pos: [s * 0.11, -0.43, 1.25], rot: [0, 0, Math.PI], outline: false }));
+  }
+  g.add(mk(new THREE.CylinderGeometry(0.014, 0.014, 0.12, 8), mc, { pos: [0, -0.22, 1.28], outline: false }));
+  g.rotation.set(0.04, 0.3, 0);
+  return g;
+}
+
+function narrator(cfg) {
+  const g = new THREE.Group();
+  const skin = C(250, 218, 188), skinD = C(228, 176, 140), hair = C(88, 60, 46), blue = C(46, 104, 218), dk = C(34, 38, 62);
+  // capelli lunghi dietro
+  g.add(mk(sph(1), hair, { pos: [0, -0.45, -0.38], scale: [1.0, 1.32, 0.8] }));
+  // corpo
+  g.add(mk(sph(1), blue, { pos: [0, -2.55, -0.05], scale: [1.55, 1.25, 0.95] }));
+  g.add(mk(sph(1), C(255, 255, 255), { pos: [0, -1.8, 0.6], scale: [0.4, 0.55, 0.25], outline: false }));
+  for (const s of [-1, 1]) g.add(mk(new THREE.BoxGeometry(0.34, 1.1, 0.14), C(36, 90, 200), { pos: [s * 0.5, -1.95, 0.72], rot: [0.1, 0, s * 0.32] }));
+  // collo
+  g.add(mk(new THREE.CylinderGeometry(0.27, 0.3, 0.7, 24), skinD, { pos: [0, -1.12, 0], outline: false }));
+  // foulard
+  g.add(mk(sph(0.14), C(240, 70, 80), { pos: [0, -1.52, 0.8] }));
+  for (const s of [-1, 1]) g.add(mk(new THREE.ConeGeometry(0.11, 0.42, 12), C(228, 52, 64), { pos: [s * 0.07, -1.82, 0.82], rot: [Math.PI, 0, s * 0.25] }));
+  // testa
+  g.add(mk(sph(1), skin, { pos: [0, 0, 0], scale: [0.9, 1.02, 0.92] }));
+  for (const s of [-1, 1]) {
+    g.add(mk(sph(0.14), skin, { pos: [s * 0.9, -0.08, -0.02], scale: [0.55, 1.1, 0.8], outline: false }));
+    g.add(mk(sph(0.05), C(255, 210, 90), { pos: [s * 0.95, -0.27, 0.0], outline: false }));
+    g.add(mk(sph(1), C(255, 150, 150), { pos: [s * 0.5, -0.3, 0.72], scale: [0.2, 0.13, 0.07], outline: false, alpha: 0.55 }));
+  }
+  // capelli frontali
+  const cap = mk(new THREE.SphereGeometry(1, 40, 24, 0, Math.PI * 2, 0, Math.PI * 0.43), hair, { scale: [0.96, 1.1, 1.0], pos: [0, 0.03, 0.0], rot: [-0.18, 0, 0], side: THREE.DoubleSide });
+  g.add(cap);
+  for (const s of [-1, 1]) g.add(mk(sph(1), hair, { pos: [s * 0.8, -0.3, 0.12], scale: [0.14, 0.62, 0.38], outline: false }));
+  // naso
+  g.add(mk(sph(1), C(238, 192, 158), { pos: [0, -0.12, 0.88], scale: [0.1, 0.13, 0.12], outline: false }));
+  // occhi + occhiali
+  const LC = [-0.32, 0.32], EY = 0.14;
+  LC.forEach((x, i) => {
+    const s = i === 0 ? -1 : 1;
+    const eye = new THREE.Group(); eye.position.set(x, EY, 0.8); eye.rotation.y = s * 0.3;
+    if (cfg.blink) eye.add(mk(new THREE.TorusGeometry(0.12, 0.018, 8, 20, Math.PI), dk, { rot: [0, 0, Math.PI], outline: false }));
+    else {
+      const sy = cfg.expr === "surprised" ? 1.3 : 1.1;
+      eye.add(mk(sph(0.14), C(255, 255, 255), { scale: [1.05, sy, 0.5], outline: false }));
+      eye.add(mk(sph(0.085), C(96, 62, 36), { pos: [0, -0.01, 0.05], scale: [1, 1, 0.5], outline: false }));
+      eye.add(mk(sph(0.045), C(20, 18, 26), { pos: [0, -0.01, 0.075], scale: [1, 1, 0.5], outline: false }));
+      eye.add(mk(sph(0.028), C(255, 255, 255), { pos: [-0.03, 0.03, 0.095], outline: false }));
+      eye.add(mk(new THREE.TorusGeometry(0.15, 0.02, 8, 20, Math.PI), dk, { scale: [1.05, 1.1, 1], pos: [0, 0.01, 0.04], outline: false }));
+      for (const [dx, dy, a] of [[0.15 * s, 0.1, 0.5 * s], [0.16 * s, 0.03, 0.2 * s]]) eye.add(mk(new THREE.CapsuleGeometry(0.01, 0.09, 4, 6), dk, { pos: [dx, dy + 0.02, 0.04], rot: [0, 0, -a - Math.PI / 2 * 0 + s * 1.2], outline: false }));
+    }
+    g.add(eye);
+    const lens = new THREE.Group(); lens.position.set(x, EY, 0.86); lens.rotation.y = s * 0.3;
+    lens.add(mk(new THREE.TorusGeometry(0.28, 0.034, 12, 40), dk, { outline: false }));
+    lens.add(mk(new THREE.CircleGeometry(0.27, 32), C(190, 225, 255), { alpha: 0.16, outline: false, material: new THREE.MeshBasicMaterial({ color: 0xbfe3ff, transparent: true, opacity: 0.16 }) }));
+    lens.add(mk(new THREE.PlaneGeometry(0.05, 0.2), null, { outline: false, material: new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.55 }), pos: [-0.12, 0.1, 0.01], rot: [0, 0, 0.7] }));
+    g.add(lens);
+    g.add(mk(new THREE.CylinderGeometry(0.014, 0.014, 0.5, 6), dk, { pos: [s * 0.62, EY + 0.02, 0.57], rot: [Math.PI / 2, 0, -s * 0.35], outline: false }));
+    let tilt = 0, by = 0.55;
+    if (cfg.expr === "surprised") { tilt = s * -0.12; by = 0.66; }
+    else if (cfg.expr === "serious") { tilt = s * 0.2; by = 0.52; }
+    g.add(mk(new THREE.CapsuleGeometry(0.03, 0.26, 4, 10), C(72, 50, 40), { pos: [x, by, 0.8], rot: [0, s * 0.3, Math.PI / 2 + tilt * (s === -1 ? 1 : 1) * 0 + tilt], outline: false }));
+  });
+  g.add(mk(new THREE.CylinderGeometry(0.014, 0.014, 0.18, 6), dk, { pos: [0, EY + 0.02, 0.9], rot: [0, 0, Math.PI / 2], outline: false }));
+  // bocca
+  const lip = C(206, 62, 88);
+  if (cfg.mouth) {
+    if (cfg.expr === "surprised") g.add(mk(sph(1), C(112, 34, 40), { pos: [0, -0.5, 0.8], scale: [0.11, 0.15, 0.08], outline: false }));
+    else {
+      g.add(mk(sph(1), C(122, 30, 50), { pos: [0, -0.48, 0.82], scale: [0.2, 0.12, 0.06], outline: false }));
+      g.add(mk(sph(1), C(255, 255, 255), { pos: [0, -0.42, 0.855], scale: [0.16, 0.035, 0.03], outline: false }));
+      g.add(mk(sph(1), C(236, 110, 128), { pos: [0, -0.55, 0.85], scale: [0.1, 0.05, 0.03], outline: false }));
+    }
+  } else if (cfg.expr === "serious") g.add(mk(new THREE.CapsuleGeometry(0.022, 0.2, 4, 8), lip, { pos: [0, -0.48, 0.84], rot: [0, 0, Math.PI / 2], outline: false }));
+  else g.add(mk(new THREE.TorusGeometry(0.2, 0.03, 8, 24, Math.PI * 0.8), lip, { pos: [0, -0.34, 0.83], rot: [0, 0, Math.PI * 1.1], outline: false }));
+  g.rotation.set(0.02, -0.3, 0);
+  return g;
+}
+
+window.init = (w, h, fov, camY, camZ, tgtY) => {
+  renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, preserveDrawingBuffer: true });
+  renderer.setSize(w, h); renderer.setClearColor(0x000000, 0);
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
+  document.body.appendChild(renderer.domElement);
+  scene = new THREE.Scene();
+  camera = new THREE.PerspectiveCamera(fov, w / h, 0.1, 100);
+  camera.position.set(0, camY, camZ); camera.lookAt(0, tgtY, 0);
+  scene.add(new THREE.HemisphereLight(0xffffff, 0x8a93b8, 0.75));
+  const d1 = new THREE.DirectionalLight(0xffffff, 1.5); d1.position.set(-3, 4, 6); scene.add(d1);
+  const d2 = new THREE.DirectionalLight(0x9db8ff, 0.7); d2.position.set(4, 1, -2); scene.add(d2);
+  return true;
+};
+window.show = (cfg) => {
+  if (root) scene.remove(root);
+  root = cfg.who === "wolf" ? wolf(cfg) : narrator(cfg);
+  scene.add(root); renderer.render(scene, camera); return true;
+};
+window.ready = true;
+</script>
+</body></html>
+
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>html,body{margin:0;background:#05061a}canvas{display:block}</style>
+<script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js","three/addons/":"./node_modules/three/examples/jsm/"}}</script>
+</head><body>
+<script type="module">
+import * as THREE from "three";
+import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
+import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
+import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
+import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js";
+import { OutputPass } from "three/addons/postprocessing/OutputPass.js";
+
+const C = (r, g, b) => new THREE.Color().setRGB(r / 255, g / 255, b / 255, THREE.SRGBColorSpace);
+let renderer, scene, camera, composer, W, H;
+const clamp = (x, a = 0, b = 1) => Math.max(a, Math.min(b, x));
+const sm = x => { x = clamp(x); return x * x * (3 - 2 * x); };
+const lerp = (a, b, t) => a + (b - a) * t;
+function rnd(seed) { let s = seed >>> 0; return () => (s = (s * 1664525 + 1013904223) >>> 0) / 4294967296; }
+
+const R = 0.72, CH = 0.1, GAPC = 0.012;          // raggio moneta, spessore, spazio
+const STACKS = [
+  { x: -2.3, rate: 0.00, name: "Materasso", col: C(150, 160, 185), edge: C(110, 120, 150), label: "0%" },
+  { x: 0.0,  rate: 0.02, name: "2% annuo", col: C(255, 196, 60), edge: C(214, 140, 20), label: "2%" },
+  { x: 2.3,  rate: 0.05, name: "5% annuo", col: C(255, 214, 80), edge: C(255, 150, 30), label: "5%" },
+];
+const MAXC = 60;
+let stackMeshes = [], labels = [], fontOK = false;
+
+function makeLabel(w = 640, h = 300) {
+  const cv = document.createElement("canvas"); cv.width = w; cv.height = h;
+  const tex = new THREE.CanvasTexture(cv); tex.colorSpace = THREE.SRGBColorSpace;
+  const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: tex, transparent: true, depthWrite: false, depthTest: false }));
+  sp.renderOrder = 10; sp.userData = { cv, tex };
+  return sp;
+}
+function drawLabel(sp, top, bot, hot) {
+  const { cv, tex } = sp.userData, g = cv.getContext("2d");
+  g.clearRect(0, 0, cv.width, cv.height);
+  g.textAlign = "center"; g.lineJoin = "round";
+  g.font = "700 150px Fredoka, sans-serif"; g.lineWidth = 18; g.strokeStyle = "#0a0c26";
+  g.strokeText(top, cv.width / 2, 150); g.fillStyle = hot ? "#ffd23c" : "#e8ecff"; g.fillText(top, cv.width / 2, 150);
+  g.font = "700 74px Fredoka, sans-serif"; g.lineWidth = 12;
+  g.strokeText(bot, cv.width / 2, 250); g.fillStyle = "#b9c0ee"; g.fillText(bot, cv.width / 2, 250);
+  tex.needsUpdate = true;
+}
+
+window.init = async function (w, h) {
+  W = w; H = h;
+  const ff = new FontFace("Fredoka", "url(./fredoka700.woff)"); await ff.load(); document.fonts.add(ff); fontOK = true;
+  renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
+  renderer.setPixelRatio(1); renderer.setSize(w, h); document.body.appendChild(renderer.domElement);
+  renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.05;
+  scene = new THREE.Scene();
+  scene.background = C(6, 7, 26); scene.fog = new THREE.FogExp2(C(10, 10, 40), 0.045);
+  const pm = new THREE.PMREMGenerator(renderer);
+  scene.environment = pm.fromScene(new RoomEnvironment(), 0.04).texture; scene.environmentIntensity = 0.55;
+  camera = new THREE.PerspectiveCamera(40, w / h, 0.1, 200);
+
+  scene.add(new THREE.HemisphereLight(C(120, 130, 255), C(40, 20, 70), 0.7));
+  const key = new THREE.DirectionalLight(C(255, 230, 190), 2.2); key.position.set(4, 9, 6); scene.add(key);
+  const rim = new THREE.DirectionalLight(C(120, 100, 255), 1.6); rim.position.set(-6, 5, -6); scene.add(rim);
+
+  // pavimento scuro lucido + griglia luminosa
+  const floor = new THREE.Mesh(new THREE.CircleGeometry(60, 64), new THREE.MeshStandardMaterial({ color: C(12, 12, 36), roughness: 0.28, metalness: 0.6 }));
+  floor.rotation.x = -Math.PI / 2; floor.position.y = -0.001; scene.add(floor);
+  const grid = new THREE.GridHelper(80, 80, C(120, 90, 255), C(50, 46, 130)); grid.material.transparent = true; grid.material.opacity = 0.35; scene.add(grid);
+
+  // stelle / polvere dorata
+  const r = rnd(7), N = 700, pos = new Float32Array(N * 3), ph = new Float32Array(N);
+  for (let i = 0; i < N; i++) { pos[i*3] = (r() - 0.5) * 40; pos[i*3+1] = r() * 18; pos[i*3+2] = (r() - 0.5) * 40 - 6; ph[i] = r() * 6.28; }
+  const pg = new THREE.BufferGeometry(); pg.setAttribute("position", new THREE.BufferAttribute(pos, 3));
+  const dust = new THREE.Points(pg, new THREE.PointsMaterial({ color: C(255, 215, 120), size: 0.07, transparent: true, opacity: 0.8, depthWrite: false, blending: THREE.AdditiveBlending }));
+  dust.userData = { base: pos.slice(), ph }; scene.add(dust); window._dust = dust;
+
+  // monete
+  const geo = new THREE.CylinderGeometry(R, R, CH, 48, 1);
+  for (const S of STACKS) {
+    const m = new THREE.MeshStandardMaterial({ color: S.col, metalness: 0.92, roughness: 0.28, emissive: S.rate === 0 ? C(0,0,0) : S.edge, emissiveIntensity: 0.12 });
+    const im = new THREE.InstancedMesh(geo, m, MAXC); im.frustumCulled = false; im.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
+    scene.add(im);
+    const rim2 = new THREE.InstancedMesh(new THREE.TorusGeometry(R, 0.018, 8, 48), new THREE.MeshStandardMaterial({ color: S.edge, metalness: 0.9, roughness: 0.3 }), MAXC);
+    rim2.frustumCulled = false; scene.add(rim2);
+    stackMeshes.push({ im, rim: rim2, S });
+    const lb = makeLabel(); scene.add(lb); labels.push(lb);
+  }
+  composer = new EffectComposer(renderer); composer.setSize(w, h);
+  composer.addPass(new RenderPass(scene, camera));
+  composer.addPass(new UnrealBloomPass(new THREE.Vector2(w, h), 0.55, 0.7, 0.82));
+  composer.addPass(new OutputPass());
+  window.ready = true;
+};
+
+const dummy = new THREE.Object3D();
+const fmt = v => String(Math.round(v)).replace(/\B(?=(\d{3})+(?!\d))/g, ".") + " €";
+
+// cfg: t (s), T (durata), years (0..30), lab (0..1 visibilita' etichette), focus (0..1 zoom finale sulla torre 5%)
+window.frame = function (cfg) {
+  const { t, years, lab = 1, focus = 0, intro = 1 } = cfg;
+  stackMeshes.forEach(({ im, rim, S }, si) => {
+    const v = 1000 * Math.pow(1 + S.rate, years);
+    const n = v / 100;                              // numero (frazionario) di monete
+    const full = Math.floor(n), frac = n - full;
+    let top = 0;
+    for (let i = 0; i < MAXC; i++) {
+      let sc = i < full ? 1 : (i === full ? sm(frac) : 0);
+      // entrata iniziale a cascata
+      const ent = sm((intro - i * 0.012) * 2.2); sc *= ent;
+      const y = i * (CH + GAPC) + CH / 2;
+      const drop = (i === full ? (1 - sm(frac)) * 0.5 : 0);
+      dummy.position.set(S.x, y + drop, 0);
+      dummy.rotation.set(0, i * 0.37 + (si * 0.9), 0);
+      dummy.scale.set(sc || 0.0001, sc || 0.0001, sc || 0.0001);
+      dummy.updateMatrix(); im.setMatrixAt(i, dummy.matrix);
+      dummy.position.y = y + CH / 2 + drop; dummy.rotation.set(Math.PI / 2, 0, i * 0.37 + (si * 0.9)); dummy.updateMatrix(); rim.setMatrixAt(i, dummy.matrix);
+      if (sc > 0.5) top = y + CH;
+    }
+    im.instanceMatrix.needsUpdate = true; rim.instanceMatrix.needsUpdate = true;
+    const lb = labels[si];
+    drawLabel(lb, fmt(v), S.name, S.rate === 0.05);
+    lb.position.set(S.x, top + 1.05, 0.2); lb.scale.set(2.25, 1.05, 1);
+    lb.material.opacity = sm(lab * 1.5 - (1 - si) * 0.2);
+  });
+  const d = window._dust, b = d.userData.base, p = d.geometry.attributes.position.array;
+  for (let i = 0; i < p.length / 3; i++) {
+    p[i*3] = b[i*3] + Math.sin(t * 0.5 + d.userData.ph[i]) * 0.4;
+    p[i*3+1] = (b[i*3+1] + t * 0.35 * (0.4 + (i % 5) * 0.15)) % 18;
+    p[i*3+2] = b[i*3+2] + Math.cos(t * 0.4 + d.userData.ph[i]) * 0.4;
+  }
+  d.geometry.attributes.position.needsUpdate = true;
+
+  // camera: volo cinematografico che inquadra sempre la torre piu' alta
+  const u = t / cfg.T;
+  const hm = Math.max(1.1, 1000 * Math.pow(1.05, years) / 100 * (CH + GAPC));
+  const ang = lerp(-0.5, 0.42, sm(u * 1.05));
+  const f = sm(focus);
+  const rad = 13.2 + 1.75 * hm - 2.2 * f;
+  const camH = 1.7 + 0.30 * hm;
+  let tx = lerp(0, 1.2, f), ty = hm * 0.5 + 1.05 + lerp(0, 0.2, f);
+  const cx = Math.sin(ang) * rad + 2.0 * f, cz = Math.cos(ang) * rad;
+  camera.position.set(cx, camH, cz); camera.lookAt(tx, ty, 0);
+  composer.render();
+};
+</script></body></html>
+
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>html,body{margin:0;background:#16060f}canvas{display:block}</style>
+<script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js","three/addons/":"./node_modules/three/examples/jsm/"}}</script>
+</head><body>
+<script type="module">
+// Scena "Cosa ti resta": due torte di monete da 1.000 € di guadagno. Una fetta rossa (la tassa) viene staccata: 26% contro 12,5%.
+import { THREE, C, clamp, sm, lerp, setup, makeLabel, drawLabel, updateDust, fmtEur } from "./common.js";
+let X, DATA, pies = [], lbs = [];
+const PR = 1.25, TH = 0.6, PX = 1.42;
+const gold = () => new THREE.MeshStandardMaterial({ color: C(255, 205, 70), metalness: 0.3, roughness: 0.4, emissive: C(255, 170, 30), emissiveIntensity: 0.55 });
+const red = () => new THREE.MeshStandardMaterial({ color: C(255, 80, 95), metalness: 0.4, roughness: 0.35, emissive: C(255, 40, 70), emissiveIntensity: 0.45 });
+
+window.setData = d => { DATA = d; };
+function wedge(a0, len, mat) { const m = new THREE.Mesh(new THREE.CylinderGeometry(PR, PR, TH, 40, 1, false, a0, len), mat); return m; }
+window.init = async function (w, h) {
+  X = await setup(w, h, { bg: [22, 7, 24], fog: [30, 10, 34], grid1: [255, 90, 160], grid2: [110, 40, 100], floor: [26, 8, 28], key: [255, 225, 200], rim: [255, 90, 170], hemiSky: [255, 130, 190], hemiGround: [70, 20, 60] });
+  DATA.pies.forEach((P, k) => {
+    const g = new THREE.Group(); g.position.set(k === 0 ? -PX : PX, 0, 0); X.scene.add(g);
+    const len = P.rate * 2 * Math.PI;
+    // la fetta della tassa e' centrata sull'angolo "verso la camera" (+z): in three.js l'angolo 0 e' +z
+    const wRed = wedge(-len / 2, len, red()), wGold = wedge(len / 2, 2 * Math.PI - len, gold());
+    wRed.position.y = TH / 2; wGold.position.y = TH / 2; g.add(wRed); g.add(wGold);
+    const edge = new THREE.Mesh(new THREE.TorusGeometry(PR, 0.03, 8, 64), new THREE.MeshStandardMaterial({ color: C(255, 160, 40), metalness: 0.9, roughness: 0.3, emissive: C(255, 120, 20), emissiveIntensity: 0.3 }));
+    edge.rotation.x = Math.PI / 2; edge.position.y = TH; g.add(edge);
+    pies.push({ g, wRed, wGold, P }); const lb = makeLabel(); X.scene.add(lb); lbs.push(lb);
+  });
+  window.ready = true;
+};
+
+// cfg: t, T, grow (0..1 torte), cut1 (0..1 fetta 26%), cut2 (0..1 fetta 12,5%), lab (0..1)
+window.frame = function (cfg) {
+  const { t, grow = 1, cut1 = 0, cut2 = 0, lab = 1 } = cfg;
+  const cuts = [cut1, cut2];
+  pies.forEach((p, k) => {
+    const gr = sm(grow - k * 0.12);
+    p.g.scale.set(Math.max(gr, 0.001), Math.max(gr, 0.001), Math.max(gr, 0.001));
+    p.g.rotation.y = 0;                      // la fetta guarda sempre la camera
+    const c = sm(cuts[k]);
+    p.wRed.position.set(0, TH / 2 + 0.55 * c, 0.0 + 1.0 * c);   // fetta staccata e sollevata verso la camera
+    p.wRed.rotation.x = -0.35 * c;
+    const net = DATA.gain * (1 - p.P.rate);
+    const shown = lerp(DATA.gain, net, c);
+    drawLabel(lbs[k], fmtEur(shown), p.P.name, c > 0.5 ? "#ffd23c" : "#e8ecff");
+    lbs[k].position.set(p.g.position.x, 2.7 + 0.1 * Math.sin(t * 1.3 + k), 0.2); lbs[k].scale.set(2.3, 1.07, 1);
+    lbs[k].material.opacity = sm(lab * 1.6 - k * 0.15);
+  });
+  updateDust(X.dust, t);
+  const u = t / cfg.T;
+  const ang = lerp(-0.28, 0.28, sm(u * 1.05));
+  const rad = 12.6, camH = lerp(9.0, 8.2, sm(u));
+  X.camera.position.set(Math.sin(ang) * rad, camH, Math.cos(ang) * rad);
+  X.camera.lookAt(0, 1.7, 0.5);
+  X.composer.render();
+};
+</script></body></html>
+
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>html,body{margin:0;background:#04161e}canvas{display:block}</style>
+<script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js","three/addons/":"./node_modules/three/examples/jsm/"}}</script>
+</head><body>
+<script type="module">
+// Scena "Telefono a rate": un telefono 3D da 1.200 € e, mese dopo mese, 24 monete-rata che cadono in una colonna.
+import { THREE, C, clamp, sm, lerp, setup, makeLabel, drawLabel, updateDust, fmtEur } from "./common.js";
+import { RoundedBoxGeometry } from "three/addons/geometries/RoundedBoxGeometry.js";
+let X, DATA, phone, screenCv, screenTex, coins, rims, lbPrice, lbTot, lbExtra, ringMark, hdr;
+const R = 0.85, CH = 0.13, GAP = 0.014, SX = 1.6, MAXC = 24;
+const dummy = new THREE.Object3D();
+
+window.setData = d => { DATA = d; };
+function drawScreen(p) {
+  const g = screenCv.getContext("2d"), w = screenCv.width, h = screenCv.height;
+  const gr = g.createLinearGradient(0, 0, 0, h); gr.addColorStop(0, "#1b5cff"); gr.addColorStop(1, "#7a2cff"); g.fillStyle = gr; g.fillRect(0, 0, w, h);
+  g.textAlign = "center"; g.fillStyle = "#ffffff"; g.font = "700 64px Fredoka, sans-serif"; g.fillText("NUOVO", w / 2, 150);
+  g.font = "700 120px Fredoka, sans-serif"; g.fillText(fmtEur(DATA.price), w / 2, 330);
+  g.fillStyle = "#cfe0ff"; g.font = "700 54px Fredoka, sans-serif"; g.fillText("oppure a rate", w / 2, 420);
+  g.fillStyle = "#ffe066"; g.font = "700 110px Fredoka, sans-serif"; g.fillText(DATA.ratas + " €", w / 2, 580);
+  g.fillStyle = "#ffffff"; g.font = "700 54px Fredoka, sans-serif"; g.fillText("× " + DATA.months + " mesi", w / 2, 660);
+  screenTex.needsUpdate = true;
+}
+window.init = async function (w, h) {
+  X = await setup(w, h, { bg: [4, 22, 32], fog: [6, 28, 40], grid1: [70, 220, 200], grid2: [30, 110, 120], floor: [6, 22, 34], key: [255, 235, 200], rim: [60, 220, 200], hemiSky: [90, 200, 220], hemiGround: [20, 50, 60] });
+  // telefono
+  phone = new THREE.Group();
+  const body = new THREE.Mesh(new RoundedBoxGeometry(2.3, 4.5, 0.32, 6, 0.28), new THREE.MeshStandardMaterial({ color: C(24, 28, 40), metalness: 0.95, roughness: 0.22 }));
+  phone.add(body);
+  screenCv = document.createElement("canvas"); screenCv.width = 512; screenCv.height = 900; screenTex = new THREE.CanvasTexture(screenCv); screenTex.colorSpace = THREE.SRGBColorSpace;
+  const scr = new THREE.Mesh(new THREE.PlaneGeometry(2.0, 4.1), new THREE.MeshBasicMaterial({ map: screenTex, toneMapped: false }));
+  scr.position.z = 0.165; phone.add(scr);
+  phone.position.set(-1.55, 1.95, 0); X.scene.add(phone);
+  // colonna di monete-rata
+  const geo = new THREE.CylinderGeometry(R, R, CH, 48, 1);
+  coins = new THREE.InstancedMesh(geo, new THREE.MeshStandardMaterial({ color: C(255, 255, 255), metalness: 0.3, roughness: 0.4, emissive: C(90, 45, 10), emissiveIntensity: 0.5 }), MAXC);
+  coins.frustumCulled = false; coins.instanceMatrix.setUsage(THREE.DynamicDrawUsage); X.scene.add(coins);
+  const gold = C(255, 200, 60), red = C(255, 70, 90);
+  const th = Math.ceil(DATA.price / DATA.rata - 0.5);   // da questo indice in poi le monete sono interessi
+  for (let i = 0; i < MAXC; i++) coins.setColorAt(i, i >= th ? red : gold);
+  coins.instanceColor.needsUpdate = true;
+  // anello sulla colonna all'altezza del prezzo
+  const hPrice = (DATA.price / DATA.rata) * (CH + GAP);
+  ringMark = new THREE.Mesh(new THREE.TorusGeometry(R + 0.18, 0.035, 10, 64), new THREE.MeshBasicMaterial({ color: C(120, 255, 230) }));
+  ringMark.rotation.x = Math.PI / 2; ringMark.position.set(SX, hPrice, 0); X.scene.add(ringMark);
+  lbPrice = makeLabel(); lbTot = makeLabel(); lbExtra = makeLabel(); hdr = makeLabel();
+  [lbPrice, lbTot, lbExtra].forEach(l => X.scene.add(l));
+  window.ready = true;
+};
+
+// cfg: t, T, mo (0..24 mesi pagati, frazionario), lab, focus
+window.frame = function (cfg) {
+  const { t, mo, lab = 1, focus = 0 } = cfg;
+  const intro = sm(clamp(t / 1.5));
+  phone.rotation.y = Math.sin(t * 0.55) * 0.5; phone.position.y = 1.95 + Math.sin(t * 1.1) * 0.06;
+  phone.scale.setScalar(Math.max(0.001, intro) * 0.82);
+  drawScreen(0);
+  let top = 0;
+  const hP = (DATA.price / DATA.rata) * (CH + GAP);
+  for (let i = 0; i < MAXC; i++) {
+    const landed = clamp(mo - i);               // 0 = non ancora, 1 = arrivata
+    const yRest = i * (CH + GAP) + CH / 2;
+    let vis = landed > 0 ? 1 : 0.0001, x = SX, y = yRest, z = 0, rot = 0;
+    if (landed > 0 && landed < 1) {              // sta cadendo con una spirale attorno al telefono
+      const e = sm(landed), s = 1 - e;
+      const ang = s * 5.2 + i * 0.9; const rr = s * 2.6;
+      x = SX + Math.cos(ang) * rr; z = Math.sin(ang) * rr; y = yRest + s * 6.5; rot = s * 6;
+    } else if (landed >= 1) top = yRest + CH / 2;
+    dummy.position.set(x, y, z); dummy.rotation.set(rot, 0, rot * 0.5); dummy.scale.setScalar(vis); dummy.updateMatrix(); coins.setMatrixAt(i, dummy.matrix);
+  }
+  coins.instanceMatrix.needsUpdate = true;
+  ringMark.visible = mo > 1;
+  const done = clamp(mo / DATA.months);
+  drawLabel(lbPrice, fmtEur(DATA.price), "prezzo del telefono", "#7dffe6");
+  lbPrice.position.set(-1.55, 4.5, 0); lbPrice.scale.set(2.3, 1.07, 1); lbPrice.material.opacity = sm(lab * 1.6);
+  const fin = sm(focus * 3);
+  drawLabel(lbTot, fin > 0.5 ? fmtEur(DATA.total) : fmtEur(DATA.rata * Math.min(mo, DATA.months)), fin > 0.5 ? "+" + fmtEur(DATA.extra) + " di interessi" : "pagati in " + Math.min(DATA.months, Math.floor(mo)) + " rate", "#ffd23c");
+  lbTot.position.set(SX, Math.max(top, 0.4) + 1.2, 0.3); lbTot.scale.set(2.3, 1.07, 1); lbTot.material.opacity = sm(mo * 2);
+  lbExtra.material.opacity = 0;
+  updateDust(X.dust, t);
+  const u = t / cfg.T, f = sm(focus);
+  const ang = lerp(-0.45, 0.4, sm(u * 1.05)) - 0.25 * f;
+  const rad = lerp(21.5, 19.5, f), camH = lerp(6.2, 6.8, f);
+  X.camera.position.set(Math.sin(ang) * rad, camH, Math.cos(ang) * rad);
+  X.camera.lookAt(0.05, lerp(2.5, 2.7, f), 0);
+  X.composer.render();
+};
+</script></body></html>
+
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>html,body{margin:0;background:#05061a}canvas{display:block}</style>
+<script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js","three/addons/":"./node_modules/three/examples/jsm/"}}</script>
+</head><body>
+<script type="module">
+// Scena "Il mutuo": anello di 25 colonne (una per anno). Ogni colonna = rate di un anno, divise in capitale (oro) e interessi (rosso).
+import { THREE, C, clamp, sm, lerp, setup, makeLabel, drawLabel, updateDust, fmtEur } from "./common.js";
+let X, DATA, cols = [], base, lbY, lbCap, lbInt;
+const N = 25, RING = 2.45, HT = 3.0, BW = 0.44;
+const goldMat = () => new THREE.MeshStandardMaterial({ color: C(255, 205, 70), metalness: 0.3, roughness: 0.4, emissive: C(255, 170, 30), emissiveIntensity: 0.55 });
+const redMat = () => new THREE.MeshStandardMaterial({ color: C(255, 80, 95), metalness: 0.4, roughness: 0.35, emissive: C(255, 40, 70), emissiveIntensity: 0.45 });
+
+window.setData = d => { DATA = d; };
+window.init = async function (w, h) {
+  X = await setup(w, h, { bg: [6, 7, 26] });
+  const geo = new THREE.BoxGeometry(1, 1, 1);
+  for (let k = 0; k < N; k++) {
+    const a = k * 2 * Math.PI / N + Math.PI;
+    const cap = new THREE.Mesh(geo, goldMat()), itr = new THREE.Mesh(geo, redMat());
+    cap.rotation.y = itr.rotation.y = -a; X.scene.add(cap); X.scene.add(itr);
+    cols.push({ cap, itr, a });
+  }
+  // anello base luminoso
+  base = new THREE.Mesh(new THREE.TorusGeometry(RING, 0.05, 12, 120), new THREE.MeshStandardMaterial({ color: C(160, 130, 255), emissive: C(120, 90, 255), emissiveIntensity: 0.8 }));
+  base.rotation.x = Math.PI / 2; base.position.y = 0.02; X.scene.add(base);
+  lbY = makeLabel(); lbCap = makeLabel(); lbInt = makeLabel();
+  X.scene.add(lbY); X.scene.add(lbCap); X.scene.add(lbInt);
+  window.ready = true;
+};
+
+// cfg: t, T, year (0..25, frazionario), focus (0..1 totali al centro), lab (0..1)
+window.frame = function (cfg) {
+  const { t, year, focus = 0, lab = 1 } = cfg;
+  const intro = clamp(t / 1.6);
+  for (let k = 0; k < N; k++) {
+    const { cap, itr, a } = cols[k];
+    const g = sm(clamp(year - k)) * sm(intro * 2);
+    const I = DATA.intShare[k], hcap = HT * (1 - I) * g, hint = HT * I * g;
+    const x = Math.cos(a) * RING, z = Math.sin(a) * RING;
+    cap.scale.set(BW, Math.max(hcap, 1e-4), BW); cap.position.set(x, hcap / 2, z);
+    itr.scale.set(BW, Math.max(hint, 1e-4), BW); itr.position.set(x, hcap + hint / 2, z);
+    cap.visible = itr.visible = g > 0.002;
+  }
+  // etichetta sull'ultima colonna
+  const cur = clamp(Math.floor(year), 0, N - 1), ca = cols[cur].a;
+  const yr = Math.min(N, Math.floor(year) + 1);
+  const pct = Math.round(DATA.intShare[cur] * 100);
+  drawLabel(lbY, "Anno " + yr, "interessi " + pct + "%", pct >= 50 ? "#ff6b7d" : "#ffd23c");
+  lbY.position.set(0, 1.9, 0); lbY.scale.set(2.3, 1.07, 1);
+  lbY.material.opacity = sm(lab * 1.6) * (1 - sm(focus * 3));
+  // totali al centro
+  drawLabel(lbCap, fmtEur(DATA.principal), "capitale prestato", "#ffd23c");
+  drawLabel(lbInt, "+" + fmtEur(DATA.interest), "solo di interessi", "#ff6b7d");
+  lbCap.position.set(0, 1.55, 0); lbCap.scale.set(2.3, 1.07, 1); lbCap.material.opacity = sm(focus * 2.2);
+  lbInt.position.set(0, 3.1, 0); lbInt.scale.set(2.3, 1.07, 1); lbInt.material.opacity = sm(focus * 2.2 - 0.6);
+  updateDust(X.dust, t);
+  // camera
+  const u = t / cfg.T, f = sm(focus);
+  const ang = lerp(0.35, 1.55, sm(u * 1.1));
+  const rad = lerp(16.8, 14.2, f), camH = lerp(7.0, 10.5, f);
+  X.camera.position.set(Math.sin(ang) * rad, camH, Math.cos(ang) * rad);
+  X.camera.lookAt(0, lerp(1.4, 1.9, f), 0);
+  X.composer.render();
+};
+</script></body></html>
+
+// Base comune delle scene 3D (stile v2): renderer, luci, pavimento, polvere dorata, bloom, etichette.
+import * as THREE from "three";
+import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
+import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
+import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
+import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js";
+import { OutputPass } from "three/addons/postprocessing/OutputPass.js";
+export { THREE };
+export const C = (r, g, b) => new THREE.Color().setRGB(r / 255, g / 255, b / 255, THREE.SRGBColorSpace);
+export const clamp = (x, a = 0, b = 1) => Math.max(a, Math.min(b, x));
+export const sm = x => { x = clamp(x); return x * x * (3 - 2 * x); };
+export const lerp = (a, b, t) => a + (b - a) * t;
+export function rnd(seed) { let s = seed >>> 0; return () => (s = (s * 1664525 + 1013904223) >>> 0) / 4294967296; }
+export const fmtEur = v => String(Math.round(v)).replace(/\B(?=(\d{3})+(?!\d))/g, ".") + " €";
+
+export function makeLabel(w = 640, h = 300) {
+  const cv = document.createElement("canvas"); cv.width = w; cv.height = h;
+  const tex = new THREE.CanvasTexture(cv); tex.colorSpace = THREE.SRGBColorSpace;
+  const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: tex, transparent: true, depthWrite: false, depthTest: false }));
+  sp.renderOrder = 10; sp.userData = { cv, tex };
+  return sp;
+}
+export function drawLabel(sp, top, bot, col = "#e8ecff") {
+  const { cv, tex } = sp.userData, g = cv.getContext("2d");
+  g.clearRect(0, 0, cv.width, cv.height);
+  g.textAlign = "center"; g.lineJoin = "round";
+  g.font = "700 150px Fredoka, sans-serif"; g.lineWidth = 18; g.strokeStyle = "#0a0c26";
+  g.strokeText(top, cv.width / 2, 150); g.fillStyle = col; g.fillText(top, cv.width / 2, 150);
+  g.font = "700 74px Fredoka, sans-serif"; g.lineWidth = 12;
+  g.strokeText(bot, cv.width / 2, 250); g.fillStyle = "#b9c0ee"; g.fillText(bot, cv.width / 2, 250);
+  tex.needsUpdate = true;
+}
+
+// opts: bg [r,g,b], fog [r,g,b], grid1, grid2 (colori), key, rim (colori luci)
+export async function setup(w, h, opts = {}) {
+  const o = Object.assign({ bg: [6, 7, 26], fog: [10, 10, 40], grid1: [120, 90, 255], grid2: [50, 46, 130], floor: [12, 12, 36],
+    key: [255, 230, 190], rim: [120, 100, 255], hemiSky: [120, 130, 255], hemiGround: [40, 20, 70], dust: [255, 215, 120] }, opts);
+  const ff = new FontFace("Fredoka", "url(./fredoka700.woff)"); await ff.load(); document.fonts.add(ff);
+  const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
+  renderer.setPixelRatio(1); renderer.setSize(w, h); document.body.appendChild(renderer.domElement);
+  renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.05;
+  const scene = new THREE.Scene();
+  scene.background = C(...o.bg); scene.fog = new THREE.FogExp2(C(...o.fog), 0.045);
+  const pm = new THREE.PMREMGenerator(renderer);
+  scene.environment = pm.fromScene(new RoomEnvironment(), 0.04).texture; scene.environmentIntensity = 0.55;
+  const camera = new THREE.PerspectiveCamera(40, w / h, 0.1, 200);
+  scene.add(new THREE.HemisphereLight(C(...o.hemiSky), C(...o.hemiGround), 0.7));
+  const key = new THREE.DirectionalLight(C(...o.key), 2.2); key.position.set(4, 9, 6); scene.add(key);
+  const rim = new THREE.DirectionalLight(C(...o.rim), 1.6); rim.position.set(-6, 5, -6); scene.add(rim);
+  const floor = new THREE.Mesh(new THREE.CircleGeometry(60, 64), new THREE.MeshStandardMaterial({ color: C(...o.floor), roughness: 0.28, metalness: 0.6 }));
+  floor.rotation.x = -Math.PI / 2; floor.position.y = -0.001; scene.add(floor);
+  const grid = new THREE.GridHelper(80, 80, C(...o.grid1), C(...o.grid2)); grid.material.transparent = true; grid.material.opacity = 0.35; scene.add(grid);
+  const r = rnd(7), N = 700, pos = new Float32Array(N * 3), ph = new Float32Array(N);
+  for (let i = 0; i < N; i++) { pos[i*3] = (r() - 0.5) * 40; pos[i*3+1] = r() * 18; pos[i*3+2] = (r() - 0.5) * 40 - 6; ph[i] = r() * 6.28; }
+  const pg = new THREE.BufferGeometry(); pg.setAttribute("position", new THREE.BufferAttribute(pos, 3));
+  const dust = new THREE.Points(pg, new THREE.PointsMaterial({ color: C(...o.dust), size: 0.07, transparent: true, opacity: 0.8, depthWrite: false, blending: THREE.AdditiveBlending }));
+  dust.userData = { base: pos.slice(), ph }; scene.add(dust);
+  const composer = new EffectComposer(renderer); composer.setSize(w, h);
+  composer.addPass(new RenderPass(scene, camera));
+  composer.addPass(new UnrealBloomPass(new THREE.Vector2(w, h), 0.55, 0.7, 0.82));
+  composer.addPass(new OutputPass());
+  return { renderer, scene, camera, composer, dust, W: w, H: h };
+}
+export function updateDust(dust, t) {
+  const b = dust.userData.base, p = dust.geometry.attributes.position.array;
+  for (let i = 0; i < p.length / 3; i++) {
+    p[i*3] = b[i*3] + Math.sin(t * 0.5 + dust.userData.ph[i]) * 0.4;
+    p[i*3+1] = (b[i*3+1] + t * 0.35 * (0.4 + (i % 5) * 0.15)) % 18;
+    p[i*3+2] = b[i*3+2] + Math.cos(t * 0.4 + dust.userData.ph[i]) * 0.4;
+  }
+  dust.geometry.attributes.position.needsUpdate = true;
+}
+
+import sys, os, subprocess, time, json
+from playwright.sync_api import sync_playwright
+from PIL import Image
+HERE=os.path.dirname(os.path.abspath(__file__)); OUT=os.path.join(HERE,"..","sprites3d"); os.makedirs(OUT,exist_ok=True)
+srv=subprocess.Popen([sys.executable,"-m","http.server","8765","--bind","127.0.0.1"],cwd=HERE,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL); time.sleep(1)
+SPR={"wolf":(440,420),"narr":(360,380)}
+# camera: (fov, camY, camZ, tgtY)
+CAM={"wolf":(24,0.0,8.2,-0.15),"narr":(24,-0.2,8.6,-0.6)}
+def variants(who):
+    ex=["neutral","skeptic","surprised","happy","worried"] if who=="wolf" else ["smile","surprised","serious"]
+    for e in ex:
+        for m in (0,1):
+            for b in (0,1): yield e,m,b
+only=sys.argv[1:] or ["wolf","narr"]
+quick = "quick" in only
+try:
+    with sync_playwright() as p:
+        br=p.chromium.launch(args=["--use-gl=angle","--use-angle=swiftshader","--enable-unsafe-swiftshader","--ignore-gpu-blocklist"])
+        for who in [x for x in only if x in SPR]:
+            w,h=SPR[who]; S=2
+            pg=br.new_page(viewport={"width":w*S,"height":h*S}); pg.on("console",lambda m:print("console:",m.text))
+            pg.goto("http://127.0.0.1:8765/scene.html"); pg.wait_for_function("window.ready===true",timeout=30000)
+            fov,cy,cz,ty=CAM[who]; pg.evaluate(f"init({w*S},{h*S},{fov},{cy},{cz},{ty})")
+            vs=list(variants(who))
+            if quick: vs=[v for v in vs if v[2]==0 and v[1]==(1 if v[0] in("skeptic","happy","smile") else 0)][:4]
+            for e,m,b in vs:
+                pg.evaluate(f"show({json.dumps(dict(who=who,expr=e,mouth=m,blink=b))})")
+                fn=os.path.join(OUT,f"{who}_{e}_{m}_{b}.png")
+                pg.screenshot(path=fn,omit_background=True)
+                Image.open(fn).convert("RGBA").resize((w,h),Image.LANCZOS).save(fn)
+            pg.close()
+        br.close()
+finally: srv.terminate()
+print("ok")
+
+import sys, os, subprocess, time, json
+from playwright.sync_api import sync_playwright
+HERE=os.path.dirname(os.path.abspath(__file__))
+def run(cfgs, outdir, w=1080, h=1920, prefix="w", page="world.html", data=None, port=8766):
+    os.makedirs(outdir, exist_ok=True)
+    srv=subprocess.Popen([sys.executable,"-m","http.server",str(port),"--bind","127.0.0.1"],cwd=HERE,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL); time.sleep(1)
+    try:
+        with sync_playwright() as p:
+            br=p.chromium.launch(args=["--use-gl=angle","--use-angle=swiftshader","--enable-unsafe-swiftshader","--ignore-gpu-blocklist"])
+            pg=br.new_page(viewport={"width":w,"height":h}); pg.on("console",lambda m:print("console:",m.text)); pg.on("pageerror",lambda e:print("ERR",e))
+            pg.goto(f"http://127.0.0.1:{port}/{page}")
+            if data is not None: pg.evaluate(f"setData({json.dumps(data)})")
+            pg.evaluate(f"init({w},{h})"); pg.wait_for_function("window.ready===true",timeout=60000)
+            t0=time.time()
+            for i,c in enumerate(cfgs):
+                fn=os.path.join(outdir,f"{prefix}{i:05d}.jpg")
+                if os.path.exists(fn): continue
+                pg.evaluate(f"frame({json.dumps(c)})")
+                pg.screenshot(path=fn,type="jpeg",quality=92)
+                if i%50==0: print(i,len(cfgs),f"{time.time()-t0:.0f}s",flush=True)
+            br.close()
+    finally: srv.terminate()
+if __name__=="__main__":
+    T=40.0
+    cf=[dict(t=t,T=T,years=y,lab=1,focus=f,intro=1) for t,y,f in [(1,0,0),(8,6,0),(16,15,0),(24,30,0),(34,30,1),(39,30,1)]]
+    t0=time.time(); import shutil; shutil.rmtree(os.path.join(HERE,"..","world_test"),ignore_errors=True); run(cf,os.path.join(HERE,"..","world_test"),w=720,h=1280,prefix="t"); print("tempo",time.time()-t0)
