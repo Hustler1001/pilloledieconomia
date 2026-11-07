@@ -16,7 +16,7 @@ def log(*a):
     print(dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M:%S"), *a, flush=True)
 
 def auth():
-    k = [os.environ.get(n, "") for n in ("X_CONSUMER_KEY", "X_CONSUMER_SECRET", "X_ACCESS_TOKEN", "X_ACCESS_SECRET")]
+    k = [os.environ.get(n, "").strip() for n in ("X_CONSUMER_KEY", "X_CONSUMER_SECRET", "X_ACCESS_TOKEN", "X_ACCESS_SECRET")]
     if not all(k):
         return None
     return OAuth1(*k)
