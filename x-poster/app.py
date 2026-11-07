@@ -124,7 +124,7 @@ def tick(oa):
         except ValueError as e:
             st["items"][it["id"]]["failed"] = str(e); log("BLOCCATO", it["id"], e)
         except Exception as e:
-            a = st["items"][it["id"]]; a["attempts"] = a.get("attempts", 0) + 1
+            a = st["items"][it["id"]]; a["attempts"] = a.get("attempts", 0) + 1; a["last_error"] = str(e)[:400]
             log("ERRORE", it["id"], a["attempts"], e)
             if a["attempts"] >= 3:
                 a["failed"] = str(e)[:200]
