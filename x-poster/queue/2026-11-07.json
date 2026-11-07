@@ -32,5 +32,14 @@
   "id": "2026-11-07-slot04-domanda",
   "when": "2026-11-07T20:00:00+01:00",
   "text": "Domanda del sabato sera: qual è la spesa che ti sembra sempre più alta di quanto ricordavi? Bolletta, spesa al supermercato, benzina o altro?\n\nRispondi qui sotto, sono curioso."
+ },
+ {
+  "id": "2026-11-07-slot05-spread",
+  "when": "2026-11-07T22:00:00+01:00",
+  "text": "Parola della sera: spread. È la differenza tra i rendimenti di due titoli di Stato. Esempio ipotetico: 3,5% contro 2,5% = 1 punto, cioè 100 punti base. Su 100 miliardi di debito sarebbe 1 miliardo l'anno in più. Informazione generale, non consulenza.",
+  "images": [
+   "img/2026-11-07-slot05.png"
+  ],
+  "thread": []
  }
 ]
