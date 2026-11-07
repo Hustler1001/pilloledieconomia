@@ -3,5 +3,34 @@
   "id": "2026-11-07-test-tfr",
   "when": "2026-11-07T01:18:00+00:00",
   "text": "Il TFR maturato in un anno è circa la retribuzione annua lorda divisa per 13,5.\n\nEsempio: 27.000 € lordi ÷ 13,5 = 2.000 € circa l'anno, prima della rivalutazione.\n\nEsempio calcolato. Informazione generale, non consulenza.\n#TFR #stipendio"
+ },
+ {
+  "id": "2026-11-07-slot01-inflazione",
+  "when": "2026-11-07T09:00:00+01:00",
+  "text": "Inflazione a ottobre: +5,4% sull'anno e +0,9% sul mese. A settembre era +4,2%.\n\nLa spinta arriva dall'energia (+31,4% annuo), mentre il carrello della spesa sale del 2,5%. Dato provvisorio.\n\nFonte: Istat\n#inflazione #Istat",
+  "images": [
+   "img/2026-11-07-slot01.png"
+  ]
+ },
+ {
+  "id": "2026-11-07-slot02-rata-mutuo",
+  "when": "2026-11-07T13:00:00+01:00",
+  "text": "Mutuo da 150.000 € a 25 anni a tasso fisso: al 3% la rata è 711,32 €, al 4% sale a 791,76 €.\n\nUn punto di tasso in più = 80,44 € al mese, circa 24.100 € in più in 25 anni.\n\nEsempio calcolato, tassi ipotetici. Informazione generale, non consulenza.\n#mutuo",
+  "images": [
+   "img/2026-11-07-slot02.png"
+  ]
+ },
+ {
+  "id": "2026-11-07-slot03-mito-aumento",
+  "when": "2026-11-07T17:00:00+01:00",
+  "text": "Mito: se lo stipendio sale del 10% e poi scende del 10%, torni al punto di partenza.\n\nFalso. 1.500 € diventano 1.650 €, ma il -10% si calcola su 1.650 €: restano 1.485 €. Ci rimetti 15 €.\n\nEsempio calcolato.\n#stipendio",
+  "images": [
+   "img/2026-11-07-slot03.png"
+  ]
+ },
+ {
+  "id": "2026-11-07-slot04-domanda",
+  "when": "2026-11-07T20:00:00+01:00",
+  "text": "Domanda del sabato sera: qual è la spesa che ti sembra sempre più alta di quanto ricordavi? Bolletta, spesa al supermercato, benzina o altro?\n\nRispondi qui sotto, sono curioso."
  }
 ]
