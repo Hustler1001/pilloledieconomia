@@ -28,9 +28,16 @@
    ],
    "attempts": 0,
    "done": true
+  },
+  "2026-11-07-slot03-mito-aumento": {
+   "ids": [
+    "2119139180337152435"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-07": 4
+  "2026-11-07": 5
  }
 }
