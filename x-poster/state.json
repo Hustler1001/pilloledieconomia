@@ -14,9 +14,23 @@
    ],
    "attempts": 0,
    "done": true
+  },
+  "2026-11-07-slot01-inflazione": {
+   "ids": [
+    "2119040379722821739"
+   ],
+   "attempts": 0,
+   "done": true
+  },
+  "2026-11-07-slot02-rata-mutuo": {
+   "ids": [
+    "2119040391240376524"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-07": 2
+  "2026-11-07": 4
  }
 }
