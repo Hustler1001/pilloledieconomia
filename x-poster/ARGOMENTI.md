@@ -7,5 +7,5 @@ Una riga per post: data · tema · numero/fonte. Non ripetere lo stesso tema pri
 - 2026-11-07 · Rata mutuo 150.000 € a 25 anni · 711,32 € (3%) vs 791,76 € (4%), +80,44 €/mese · calcolato, tassi ipotetici
 - 2026-11-07 · Mito +10% e poi -10% sullo stipendio · 1.500 → 1.650 → 1.485 € · calcolato
 - 2026-11-07 · Domanda ai lettori: spesa che sembra più alta di prima · nessun dato
-- 2026-11-07 · Parola della sera: spread · 3,5% - 2,5% = 100 punti base, su 100 mld = 1 mld/anno · calcolato, tassi ipotetici
+- 2026-11-07 · Complotto del giorno: signoraggio, utili Bankitalia · FALSO: 2025 utile 1.652 mln, 340 mln dividendo, 1.272 mln allo Stato, 466 mln imposte · Banca d'Italia
 - (video già fatti, da non ripetere uguali) deposito cauzionale, 5 tasse nascoste, stipendio/IRPEF, rate, cedolare secca, imposta di registro
