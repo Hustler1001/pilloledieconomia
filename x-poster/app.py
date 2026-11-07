@@ -5,7 +5,7 @@ import requests
 from requests_oauthlib import OAuth1
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-STATE_DIR = os.environ.get("STATE_DIR", "/data" if os.path.isdir("/data") else HERE)
+STATE_DIR = os.environ.get("STATE_DIR", HERE)
 STATE_FILE = os.path.join(STATE_DIR, "state.json")
 DRY = os.environ.get("DRY_RUN", "") == "1"
 MAX_PER_DAY = int(os.environ.get("MAX_PER_DAY", "6"))   # tetto di sicurezza
@@ -13,7 +13,7 @@ LATE_MAX_H = float(os.environ.get("LATE_MAX_H", "6"))   # non recupera post piu'
 API = "https://api.x.com/2"
 
 def log(*a):
-    print(dt.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M:%S"), *a, flush=True)
+    print(dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M:%S"), *a, flush=True)
 
 def auth():
     k = [os.environ.get(n, "") for n in ("X_CONSUMER_KEY", "X_CONSUMER_SECRET", "X_ACCESS_TOKEN", "X_ACCESS_SECRET")]

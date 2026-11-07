@@ -1,0 +1,38 @@
+name: x-poster
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch: {}
+concurrency:
+  group: x-poster
+  cancel-in-progress: false
+permissions:
+  contents: write
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q requests requests-oauthlib
+      - name: Pubblica i post in coda
+        working-directory: x-poster
+        env:
+          ONCE: "1"
+          X_CONSUMER_KEY: ${{ secrets.X_CONSUMER_KEY }}
+          X_CONSUMER_SECRET: ${{ secrets.X_CONSUMER_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
+        run: python app.py
+      - name: Salva lo stato (post già pubblicati)
+        run: |
+          git config user.name "x-poster"
+          git config user.email "x-poster@users.noreply.github.com"
+          git add x-poster/state.json || true
+          if ! git diff --cached --quiet; then
+            git commit -m "stato x-poster [skip ci]"
+            for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && break || sleep 5; done
+          fi
