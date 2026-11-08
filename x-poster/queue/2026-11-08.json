@@ -1,0 +1,57 @@
+[
+ {
+  "id": "2026-11-08-slot01-disoccupazione",
+  "when": "2026-11-08T09:00:00+01:00",
+  "text": "Disoccupazione a settembre: 6,3%, stabile sul mese. Quella giovanile è al 19,9% (-0,4 punti).\n\nOccupazione al 63,0%, +0,4 punti sull'anno: +198mila occupati rispetto a settembre 2025. Dati provvisori.\n\nFonte: Istat\n#lavoro #Istat",
+  "images": [
+   "img/2026-11-08-slot01.png"
+  ]
+ },
+ {
+  "id": "2026-11-08-slot02-risparmio-200",
+  "when": "2026-11-08T13:00:00+01:00",
+  "text": "Metti da parte 200 € al mese per 10 anni: versi 24.000 €.\n\nSe il rendimento fosse del 3% annuo (ipotesi), arrivi a circa 27.948 €. Sono 3.948 € in più. Ma i rendimenti non sono garantiti e si può perdere.\n\nEsempio calcolato. Informazione generale, non consulenza.\n#risparmio",
+  "images": [
+   "img/2026-11-08-slot02.png"
+  ]
+ },
+ {
+  "id": "2026-11-08-slot03-thread-tasso-reale",
+  "when": "2026-11-08T17:00:00+01:00",
+  "text": "100 € oggi, con inflazione al 5,4%, tra un anno comprano quanto 94,88 € di oggi.\n\nPerché il tasso scritto sul conto non basta: serve il tasso reale. Thread 👇",
+  "images": [
+   "img/2026-11-08-slot03a.png"
+  ],
+  "thread": [
+   {
+    "text": "Tasso nominale = quello che vedi sul conto o sul deposito.\nTasso reale = quello che resta dopo l'inflazione.\n\nFormula: (1 + nominale) ÷ (1 + inflazione) - 1.",
+    "images": []
+   },
+   {
+    "text": "Esempio: conto al 2% e inflazione al 5,4%.\n1,02 ÷ 1,054 - 1 = -3,23%.\n\n10.000 € diventano 10.200 € nominali, ma valgono come 9.677 € di oggi. Il numero sale, il potere d'acquisto scende.\n\nEsempio calcolato.",
+    "images": []
+   },
+   {
+    "text": "Attenzione: il 5,4% è l'inflazione annua di ottobre 2026 (Istat, dato provvisorio), non una previsione. Se l'inflazione scende, il calcolo cambia.\n\nLa regola resta: confronta sempre il tasso con l'inflazione.",
+    "images": []
+   },
+   {
+    "text": "Informazione generale, non consulenza.\n\nDomanda: l'ultima volta che hai guardato il tasso di un conto o di un deposito, hai pensato anche all'inflazione?",
+    "images": []
+   }
+  ]
+ },
+ {
+  "id": "2026-11-08-slot04-domanda",
+  "when": "2026-11-08T20:00:00+01:00",
+  "text": "Domanda semplice: qual è l'acquisto di tutti i giorni di cui ormai guardi sempre il prezzo prima di metterlo nel carrello?\n\nCaffè, pane, benzina, detersivo? Scrivilo qui sotto."
+ },
+ {
+  "id": "2026-11-08-slot05-complotto-contante",
+  "when": "2026-11-08T22:00:00+01:00",
+  "text": "COMPLOTTO DEL GIORNO. Vero o falso?\n\n\"Il contante sta per essere abolito.\"\n\nVerdetto: FALSA. Per la BCE le banconote e monete in euro hanno corso legale e il contante resta \"indispensabile\". Capisci perché circola, ma i testi ufficiali dicono altro. Fonte: BCE\n#contante",
+  "images": [
+   "img/2026-11-08-slot05.png"
+  ]
+ }
+]

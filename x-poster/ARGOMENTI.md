@@ -9,3 +9,8 @@ Una riga per post: data · tema · numero/fonte. Non ripetere lo stesso tema pri
 - 2026-11-07 · Domanda ai lettori: spesa che sembra più alta di prima · nessun dato
 - 2026-11-07 · Complotto del giorno: signoraggio, utili Bankitalia · FALSO: 2025 utile 1.652 mln, 340 mln dividendo, 1.272 mln allo Stato, 466 mln imposte · Banca d'Italia
 - (video già fatti, da non ripetere uguali) deposito cauzionale, 5 tasse nascoste, stipendio/IRPEF, rate, cedolare secca, imposta di registro
+- 2026-11-08 · Disoccupazione settembre 2026 · 6,3%, giovani 19,9%, occupazione 63,0% · Istat (29/10/2026)
+- 2026-11-08 · Risparmio 200 €/mese per 10 anni · 27.948 € vs 24.000 € versati (3% ipotetico) · calcolato
+- 2026-11-08 · Thread tasso nominale vs reale · 100 € → 94,88 €; conto 2% → -3,23% reale · Istat inflazione 5,4% + calcolato
+- 2026-11-08 · Domanda ai lettori: acquisto di cui guardi il prezzo · nessun dato
+- 2026-11-08 · Complotto del giorno: contante abolito · FALSA, corso legale · BCE
