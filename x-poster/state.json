@@ -42,9 +42,16 @@
    ],
    "attempts": 0,
    "done": true
+  },
+  "2026-11-07-slot05-complotto-signoraggio": {
+   "ids": [
+    "2119244651622273346"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-07": 6
+  "2026-11-08": 1
  }
 }
