@@ -81,9 +81,16 @@
    ],
    "attempts": 0,
    "done": true
+  },
+  "2026-11-08-slot05-complotto-contante": {
+   "ids": [
+    "2119568994202005607"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-08": 5
+  "2026-11-08": 6
  }
 }
