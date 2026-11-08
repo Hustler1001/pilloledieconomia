@@ -49,9 +49,16 @@
    ],
    "attempts": 0,
    "done": true
+  },
+  "2026-11-08-slot01-disoccupazione": {
+   "ids": [
+    "2119340229928603799"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-08": 1
+  "2026-11-08": 2
  }
 }
