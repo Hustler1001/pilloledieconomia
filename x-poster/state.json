@@ -95,9 +95,38 @@
    ],
    "attempts": 0,
    "done": true
+  },
+  "2026-11-09-slot02-abbonamenti": {
+   "failed": "troppo in ritardo, saltato",
+   "ids": []
+  },
+  "2026-11-09-slot03-thread-rate": {
+   "ids": [
+    "2119897995617435707",
+    "2119898005595635880",
+    "2119898015255204139",
+    "2119898024902111366",
+    "2119898034553131163"
+   ],
+   "attempts": 0,
+   "done": true
+  },
+  "2026-11-09-slot04-domanda-extra": {
+   "ids": [
+    "2119898044145570068"
+   ],
+   "attempts": 0,
+   "done": true
+  },
+  "2026-11-09-slot05-complotto-prelievo": {
+   "ids": [
+    "2119898071181963632"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-09": 1
+  "2026-11-09": 4
  }
 }
