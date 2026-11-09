@@ -14,3 +14,8 @@ Una riga per post: data · tema · numero/fonte. Non ripetere lo stesso tema pri
 - 2026-11-08 · Thread tasso nominale vs reale · 100 € → 94,88 €; conto 2% → -3,23% reale · Istat inflazione 5,4% + calcolato
 - 2026-11-08 · Domanda ai lettori: acquisto di cui guardi il prezzo · nessun dato
 - 2026-11-08 · Complotto del giorno: contante abolito · FALSA, corso legale · BCE
+- 2026-11-09 · PIL III trimestre 2026 · 0,0% t/t, +0,8% a/a, acquisito 2026 +0,8% · Istat (30/10/2026)
+- 2026-11-09 · Abbonamento 9,99 €/mese · 119,88 €/anno, 1.198,80 € in 10 anni · calcolato
+- 2026-11-09 · Thread finanziamento a rate 3.000 € TAN 8% · costo 131,58 € (12 mesi), 256,36 € (24), 384,33 € (36) · calcolato, ipotetico
+- 2026-11-09 · Domanda ai lettori: 500 € in più, cosa ne fai · nessun dato
+- 2026-11-09 · Complotto del giorno: prelievo dai conti · MANCA IL CONTESTO, 6 per mille nel 1992 = 60 € su 10.000 € · Corte cost. 143/1995

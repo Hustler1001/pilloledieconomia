@@ -1,0 +1,62 @@
+[
+ {
+  "id": "2026-11-09-slot01-pil-terzo-trim",
+  "when": "2026-11-09T09:00:00+01:00",
+  "text": "Il PIL italiano nel terzo trimestre 2026 è fermo: 0,0% sul trimestre precedente, +0,8% sull'anno. Crescita già acquisita per il 2026: +0,8%. Servizi e agricoltura su, industria giù. Fonte: Istat, stima preliminare del 30/10.",
+  "images": [
+   "img/2026-11-09-slot01.png"
+  ],
+  "thread": []
+ },
+ {
+  "id": "2026-11-09-slot02-abbonamenti",
+  "when": "2026-11-09T13:00:00+01:00",
+  "text": "Un abbonamento da 9,99 € al mese sembra niente. In un anno sono 119,88 €, in 10 anni 1.198,80 €. Esempio calcolato: con tre abbonamenti uguali arrivi a 3.596,40 € in 10 anni. Ogni tanto controlla quali usi davvero.",
+  "images": [
+   "img/2026-11-09-slot02.png"
+  ],
+  "thread": []
+ },
+ {
+  "id": "2026-11-09-slot03-thread-rate",
+  "when": "2026-11-09T17:00:00+01:00",
+  "text": "Compri qualcosa da 3.000 € a rate. Quanto paghi davvero in più? Esempio calcolato con TAN 8% ipotetico e tre durate diverse. Thread.",
+  "images": [
+   "img/2026-11-09-slot03a.png"
+  ],
+  "thread": [
+   {
+    "text": "12 mesi: rata 260,97 €, totale restituito 3.131,58 €. Il costo del credito è di 131,58 €.",
+    "images": []
+   },
+   {
+    "text": "24 mesi: rata 135,68 €, totale 3.256,36 €, costo 256,36 €. 36 mesi: rata 94,01 €, totale 3.384,33 €, costo 384,33 €.",
+    "images": []
+   },
+   {
+    "text": "La rata bassa sembra comoda, ma dura di più e costa di più: da 12 a 36 mesi paghi 252,75 € in più per lo stesso oggetto. Chiedi sempre il TAEG, che include anche le spese. Informazione generale, non consulenza.",
+    "images": []
+   },
+   {
+    "text": "Tassi e importi qui sono ipotetici: il tuo contratto può essere diverso. Domanda: ti è mai capitato di scegliere la rata più bassa e poi accorgerti che costava di più?",
+    "images": []
+   }
+  ]
+ },
+ {
+  "id": "2026-11-09-slot04-domanda-extra",
+  "when": "2026-11-09T20:00:00+01:00",
+  "text": "Domanda semplice: se domani ti arrivassero 500 € in più, cosa faresti? Li metti da parte, li spendi o li usi per chiudere qualche pagamento? Una sola risposta, vale tutto.",
+  "images": [],
+  "thread": []
+ },
+ {
+  "id": "2026-11-09-slot05-complotto-prelievo",
+  "when": "2026-11-09T22:00:00+01:00",
+  "text": "COMPLOTTO DEL GIORNO. Vero o falso?\n\"Lo Stato può prendere i soldi dai conti, è già successo.\"\nVerdetto: MANCA IL CONTESTO. Nel 1992 ci fu un prelievo una tantum del 6 per mille: 60 € ogni 10.000 €. Fonte: Corte costituzionale, sent. 143/1995.",
+  "images": [
+   "img/2026-11-09-slot05.png"
+  ],
+  "thread": []
+ }
+]
