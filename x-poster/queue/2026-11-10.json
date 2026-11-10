@@ -1,0 +1,40 @@
+[
+ {
+  "id": "2026-11-10-slot01-bce-tassi",
+  "when": "2026-11-10T09:00:00+01:00",
+  "text": "La BCE ha lasciato i tassi fermi il 29 ottobre: deposito 2,50%, rifinanziamento principale 2,65%, marginale 2,90%. Il caro energia spinge l'inflazione e frena la crescita, quindi decide riunione per riunione. Fonte: BCE",
+  "images": [
+   "img/2026-11-10-slot01.png"
+  ]
+ },
+ {
+  "id": "2026-11-10-slot02-spesa-inflazione",
+  "when": "2026-11-10T13:00:00+01:00",
+  "text": "Spesa da 400 € al mese. Se i prezzi salgono come l'inflazione di ottobre (+5,4%, Istat), diventa 421,60 €: 21,60 € in più al mese, 259,20 € in un anno. Esempio calcolato. Informazione generale, non consulenza.",
+  "images": [
+   "img/2026-11-10-slot02.png"
+  ]
+ },
+ {
+  "id": "2026-11-10-slot03-mito-scaglione",
+  "when": "2026-11-10T17:00:00+01:00",
+  "text": "MITO: «Se passo allo scaglione IRPEF successivo, perdo soldi.» FALSO: l'aliquota più alta si applica solo alla parte oltre la soglia. Da 28.000 a 29.000 € lordi, sul 1.000 € extra paghi 330 € (33%) e ne tieni 670. Fonte: INPS",
+  "images": [
+   "img/2026-11-10-slot03.png"
+  ]
+ },
+ {
+  "id": "2026-11-10-slot04-domanda-taglio",
+  "when": "2026-11-10T20:00:00+01:00",
+  "text": "Domanda semplice: quando i soldi sono pochi, cosa tagli per prima? Svago e uscite, abbonamenti, spesa o viaggi? Dimmi la tua e perché.",
+  "images": []
+ },
+ {
+  "id": "2026-11-10-slot05-complotto-banche",
+  "when": "2026-11-10T22:00:00+01:00",
+  "text": "COMPLOTTO DEL GIORNO. Vero o falso?\n«Le banche creano denaro dal nulla.»\nIN PARTE VERA: per la Bank of England la maggior parte del denaro nasce quando le banche concedono prestiti, ma la quantità dipende dalla banca centrale. Fonte: BoE",
+  "images": [
+   "img/2026-11-10-slot05.png"
+  ]
+ }
+]

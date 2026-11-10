@@ -19,3 +19,8 @@ Una riga per post: data · tema · numero/fonte. Non ripetere lo stesso tema pri
 - 2026-11-09 · Thread finanziamento a rate 3.000 € TAN 8% · costo 131,58 € (12 mesi), 256,36 € (24), 384,33 € (36) · calcolato, ipotetico
 - 2026-11-09 · Domanda ai lettori: 500 € in più, cosa ne fai · nessun dato
 - 2026-11-09 · Complotto del giorno: prelievo dai conti · MANCA IL CONTESTO, 6 per mille nel 1992 = 60 € su 10.000 € · Corte cost. 143/1995
+- 2026-11-10 · BCE tassi invariati · depositi 2,50%, rifinanziamento 2,65%, marginale 2,90% · BCE (29/10/2026)
+- 2026-11-10 · Spesa 400 €/mese con inflazione +5,4% · 421,60 €/mese, +259,20 €/anno · Istat + calcolato
+- 2026-11-10 · Mito scaglione IRPEF fa perdere soldi · 1.000 € extra a 33% = 330 €, ne restano 670 · INPS + calcolato
+- 2026-11-10 · Domanda ai lettori: cosa tagli per prima · nessun dato
+- 2026-11-10 · Complotto del giorno: banche creano denaro dal nulla · IN PARTE VERA · Bank of England 2014
