@@ -24,3 +24,8 @@ Una riga per post: data · tema · numero/fonte. Non ripetere lo stesso tema pri
 - 2026-11-10 · Mito scaglione IRPEF fa perdere soldi · 1.000 € extra a 33% = 330 €, ne restano 670 · INPS + calcolato
 - 2026-11-10 · Domanda ai lettori: cosa tagli per prima · nessun dato
 - 2026-11-10 · Complotto del giorno: banche creano denaro dal nulla · IN PARTE VERA · Bank of England 2014
+- 2026-11-11 · Prezzi alla produzione settembre 2026 · +13,8% annuo, +2,9% mensile, interno +17,4% · Istat (28/10/2026)
+- 2026-11-11 · Prestito auto 12.000 € 48 mesi · rata 281,82 €, interessi 1.527,38 € (TAN 6% ipotetico) · calcolato
+- 2026-11-11 · Thread regola del 72 · 3% = 24 anni (esatto 23,4); inflazione 5,4% = 13,3 anni · calcolato + Istat
+- 2026-11-11 · Domanda ai lettori: 1.000 € oggi o 1.100 € tra un anno · nessun dato
+- 2026-11-11 · Complotto del giorno: 1 euro = 1.000 lire · FALSA, cambio 1.936,27 lire, 1.000 lire = 0,52 € · Reg. CE 2866/98

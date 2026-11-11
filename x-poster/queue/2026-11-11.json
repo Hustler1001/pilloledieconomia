@@ -1,0 +1,57 @@
+[
+ {
+  "id": "2026-11-11-slot01-prezzi-produzione",
+  "when": "2026-11-11T09:00:00+01:00",
+  "text": "Prezzi alla produzione dell'industria a settembre: +13,8% in un anno, +2,9% sul mese.\n\nSul mercato interno +17,4% annuo. Sono i prezzi che le imprese incassano, prima di arrivare agli scaffali. Dati provvisori.\n\nFonte: Istat, 28/10/2026\n#Istat #prezzi",
+  "images": [
+   "img/2026-11-11-slot01.png"
+  ]
+ },
+ {
+  "id": "2026-11-11-slot02-prestito-auto",
+  "when": "2026-11-11T13:00:00+01:00",
+  "text": "Prestito per un'auto: 12.000 € in 48 mesi.\n\nCon un TAN del 6% (ipotesi) la rata è di 281,82 € al mese. In totale restituisci 13.527,38 €: 1.527,38 € sono interessi.\n\nEsempio calcolato. Informazione generale, non consulenza.\n#prestiti",
+  "images": [
+   "img/2026-11-11-slot02.png"
+  ]
+ },
+ {
+  "id": "2026-11-11-slot03-thread-regola-72",
+  "when": "2026-11-11T17:00:00+01:00",
+  "text": "Un trucco da calcolatrice mentale: in quanti anni raddoppia un capitale? Basta dividere 72 per il tasso annuo.\n\nÈ la regola del 72. Thread 👇",
+  "images": [
+   "img/2026-11-11-slot03a.png"
+  ],
+  "thread": [
+   {
+    "text": "Esempio: tasso 3% annuo.\n72 diviso 3 = 24 anni circa.\n\nIl calcolo esatto dà 23,4 anni: la regola è un'approssimazione, ma vicina. Funziona bene con tassi tra il 2% e il 10%.\n\nEsempio calcolato, tasso ipotetico.",
+    "images": []
+   },
+   {
+    "text": "Vale anche al contrario, per i prezzi. Se l'inflazione restasse al 5,4% annuo (dato Istat di ottobre, non è una previsione):\n72 diviso 5,4 = 13,3 anni circa.\n\nIn quel tempo i prezzi raddoppierebbero.",
+    "images": []
+   },
+   {
+    "text": "Attenzione: la regola assume un tasso costante e nessuna tassa. Nella realtà i rendimenti cambiano, non sono garantiti e si può perdere parte del capitale.\n\nInformazione generale, non consulenza.",
+    "images": []
+   },
+   {
+    "text": "Domanda: se i tuoi soldi crescessero del 3% l'anno, ti sembrerebbe lungo aspettare 24 anni per raddoppiarli? Scrivilo qui sotto.",
+    "images": []
+   }
+  ]
+ },
+ {
+  "id": "2026-11-11-slot04-domanda",
+  "when": "2026-11-11T20:00:00+01:00",
+  "text": "Domanda secca: preferisci 1.000 € oggi o 1.100 € tra un anno?\n\nOgnuno ha le sue ragioni. Scrivi A (oggi) o B (tra un anno) e dimmi perché."
+ },
+ {
+  "id": "2026-11-11-slot05-complotto-lire",
+  "when": "2026-11-11T22:00:00+01:00",
+  "text": "COMPLOTTO DEL GIORNO. Vero o falso?\n\n\"Con l'euro 1 euro valeva 1.000 lire.\"\n\nVerdetto: FALSA. Il cambio fu fissato a 1.936,27 lire. 1.000 lire erano 0,52 €. Capisci perché circola, ma la norma dice altro. Fonte: Reg. CE 2866/98\n#euro #lire",
+  "images": [
+   "img/2026-11-11-slot05.png"
+  ]
+ }
+]
