@@ -156,9 +156,20 @@
    ],
    "attempts": 0,
    "done": true
+  },
+  "2026-11-11-slot01-prezzi-produzione": {
+   "failed": "troppo in ritardo, saltato",
+   "ids": []
+  },
+  "2026-11-11-slot02-prestito-auto": {
+   "ids": [
+    "2120517466573160739"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-10": 4
+  "2026-11-11": 1
  }
 }
