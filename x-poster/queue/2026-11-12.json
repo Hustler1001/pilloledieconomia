@@ -1,0 +1,40 @@
+[
+ {
+  "id": "2026-11-12-slot01-acconto-irpef",
+  "when": "2026-11-12T09:00:00+01:00",
+  "images": [
+   "img/2026-11-12-slot01.png"
+  ],
+  "text": "Il 30 novembre scade il secondo acconto IRPEF: è il restante 60% dell'acconto (il 40% si versa a giugno con il saldo).\n\nEsempio: acconto 5.000 € → a novembre ne paghi 3.000 €. Sotto i 257,52 € si versa tutto in un'unica volta.\n\nFonte: Agenzia delle Entrate\n#IRPEF #fisco"
+ },
+ {
+  "id": "2026-11-12-slot02-conto-deposito",
+  "when": "2026-11-12T13:00:00+01:00",
+  "images": [
+   "img/2026-11-12-slot02.png"
+  ],
+  "text": "10.000 € su un conto deposito al 2% lordo (ipotesi): fanno 200 € di interessi in un anno.\n\nLa banca trattiene il 26% di ritenuta: 52 €. Ti restano 148 € netti.\n\nEsempio calcolato. Informazione generale, non consulenza.\n#risparmio"
+ },
+ {
+  "id": "2026-11-12-slot03-mito-sconti",
+  "when": "2026-11-12T17:00:00+01:00",
+  "images": [
+   "img/2026-11-12-slot03.png"
+  ],
+  "text": "Mito: \"sconto del 20% e poi un altro 10% fanno 30%\". Falso.\n\nSu 100 € il 20% lo porta a 80 €. Il 10% si applica a 80 €, non a 100: sono 72 €. Lo sconto vero è del 28%.\n\nEsempio calcolato."
+ },
+ {
+  "id": "2026-11-12-slot04-domanda-regali",
+  "when": "2026-11-12T20:00:00+01:00",
+  "images": [],
+  "text": "Domanda semplice: per i regali di Natale fissi un budget prima di entrare nei negozi o decidi strada facendo?\n\nRispondi: A) budget fisso B) a sentimento."
+ },
+ {
+  "id": "2026-11-12-slot05-complotto-euro-digitale",
+  "when": "2026-11-12T22:00:00+01:00",
+  "images": [
+   "img/2026-11-12-slot05.png"
+  ],
+  "text": "COMPLOTTO DEL GIORNO. Si dice: \"l'euro digitale controlla ogni tua spesa e abolisce il contante\".\n\nVerdetto: MANCA IL CONTESTO. Capisci perché circola, ma la BCE dice che le banconote restano e che vede solo codici cifrati, non chi paga. Non è ancora legge (feb 2026).\nFonte: BCE"
+ }
+]

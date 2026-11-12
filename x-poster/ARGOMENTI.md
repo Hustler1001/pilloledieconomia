@@ -29,3 +29,8 @@ Una riga per post: data · tema · numero/fonte. Non ripetere lo stesso tema pri
 - 2026-11-11 · Thread regola del 72 · 3% = 24 anni (esatto 23,4); inflazione 5,4% = 13,3 anni · calcolato + Istat
 - 2026-11-11 · Domanda ai lettori: 1.000 € oggi o 1.100 € tra un anno · nessun dato
 - 2026-11-11 · Complotto del giorno: 1 euro = 1.000 lire · FALSA, cambio 1.936,27 lire, 1.000 lire = 0,52 € · Reg. CE 2866/98
+- 2026-11-12 · Secondo acconto IRPEF 30/11 · 60%, esempio 5.000 € → 3.000 €, soglia 257,52 € · Agenzia delle Entrate
+- 2026-11-12 · Conto deposito 10.000 € al 2% · 200 € lordi, 52 € ritenuta 26%, 148 € netti · calcolato, ipotetico
+- 2026-11-12 · Mito sconto 20% + 10% · 100 → 72 €, sconto reale 28% · calcolato
+- 2026-11-12 · Domanda ai lettori: budget regali di Natale · nessun dato
+- 2026-11-12 · Complotto del giorno: euro digitale controlla e abolisce contante · MANCA IL CONTESTO · BCE (Cipollone 19/02/2026)
