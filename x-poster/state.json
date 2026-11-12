@@ -192,9 +192,16 @@
    ],
    "attempts": 0,
    "done": true
+  },
+  "2026-11-12-slot01-acconto-irpef": {
+   "ids": [
+    "2120821755094630808"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-11": 4
+  "2026-11-12": 1
  }
 }
