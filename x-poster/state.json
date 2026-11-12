@@ -210,9 +210,23 @@
    ],
    "attempts": 0,
    "done": true
+  },
+  "2026-11-12-slot04-domanda-regali": {
+   "ids": [
+    "2121027631629938867"
+   ],
+   "attempts": 0,
+   "done": true
+  },
+  "2026-11-12-slot05-complotto-euro-digitale": {
+   "ids": [
+    "2121027642488914010"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-12": 2
+  "2026-11-12": 4
  }
 }
