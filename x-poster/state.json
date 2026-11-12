@@ -199,9 +199,20 @@
    ],
    "attempts": 0,
    "done": true
+  },
+  "2026-11-12-slot02-conto-deposito": {
+   "failed": "troppo in ritardo, saltato",
+   "ids": []
+  },
+  "2026-11-12-slot03-mito-sconti": {
+   "ids": [
+    "2120946140560732397"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-12": 1
+  "2026-11-12": 2
  }
 }
