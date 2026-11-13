@@ -224,9 +224,23 @@
    ],
    "attempts": 0,
    "done": true
+  },
+  "2026-11-13-slot01-produzione-industriale": {
+   "ids": [
+    "2121217275889963321"
+   ],
+   "attempts": 0,
+   "done": true
+  },
+  "2026-11-13-slot02-mutuo-extra-100": {
+   "ids": [
+    "2121217287436820706"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-12": 4
+  "2026-11-13": 2
  }
 }
