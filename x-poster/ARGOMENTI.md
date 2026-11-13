@@ -34,3 +34,8 @@ Una riga per post: data · tema · numero/fonte. Non ripetere lo stesso tema pri
 - 2026-11-12 · Mito sconto 20% + 10% · 100 → 72 €, sconto reale 28% · calcolato
 - 2026-11-12 · Domanda ai lettori: budget regali di Natale · nessun dato
 - 2026-11-12 · Complotto del giorno: euro digitale controlla e abolisce contante · MANCA IL CONTESTO · BCE (Cipollone 19/02/2026)
+- 2026-11-13 · Produzione industriale settembre 2026 · +1,2% m/m, -0,1% a/a, III trim. -0,4%, chimica -8,3% · Istat (11/11/2026)
+- 2026-11-13 · Mutuo 150.000 € 3% 25 anni con +100 €/mese · 249 rate (-51 mesi), interessi 63.396 → 51.552 € · calcolato, ipotetico
+- 2026-11-13 · Thread Iva 22% scorporo · 100 € → 18,03 € di Iva, 50 € → 9,02 € · DPR 633/1972 + calcolato
+- 2026-11-13 · Domanda ai lettori: piccole spese mensili (caffè, snack) · nessun dato
+- 2026-11-13 · Complotto del giorno: Grande Reset · FALSA · PolitiFact (28/09/2023), Open

@@ -1,0 +1,62 @@
+[
+ {
+  "id": "2026-11-13-slot01-produzione-industriale",
+  "when": "2026-11-13T09:00:00+01:00",
+  "images": [
+   "img/2026-11-13-slot01.png"
+  ],
+  "text": "A settembre la produzione industriale italiana è salita dell'1,2% su agosto, ma resta -0,1% rispetto a un anno fa. Il terzo trimestre chiude a -0,4%.\n\nIn calo la chimica (-8,3%), bene i mezzi di trasporto (+7,3%).\nFonte: Istat, 11/11/2026\n#Istat #industria"
+ },
+ {
+  "id": "2026-11-13-slot02-mutuo-extra-100",
+  "when": "2026-11-13T13:00:00+01:00",
+  "images": [
+   "img/2026-11-13-slot02.png"
+  ],
+  "text": "Mutuo 150.000 € a 25 anni al 3% (ipotesi): rata 711,32 €. Se ogni mese ne versi 100 in più, finisci dopo 249 rate invece di 300: 51 mesi prima.\n\nInteressi da 63.396 € a 51.552 €.\nEsempio calcolato. Informazione generale, non consulenza."
+ },
+ {
+  "id": "2026-11-13-slot03-thread-iva",
+  "when": "2026-11-13T17:00:00+01:00",
+  "images": [
+   "img/2026-11-13-slot03.png"
+  ],
+  "text": "Compri un oggetto a 100 € con Iva al 22%. Quanta Iva hai pagato? Non 22 €. Sono 18,03 €.\n\nSotto un filo di 5 post spiego perché, con numeri veri.",
+  "thread": [
+   {
+    "text": "Le aliquote Iva in Italia: 22% ordinaria, poi 10%, 5% e 4% per alcune categorie di beni e servizi (DPR 633/1972). Il 22% è il caso più comune.",
+    "images": []
+   },
+   {
+    "text": "Il punto: il 22% si calcola sul prezzo SENZA Iva. Prezzo netto 81,97 € + 22% (18,03 €) = 100 €. Se togliessi 22 € da 100 ti resterebbero 78 €, e il conto non torna.",
+    "images": []
+   },
+   {
+    "text": "Formula per scorporare: prezzo con Iva diviso 1,22. Esempio: 50 € ÷ 1,22 = 40,98 € di prezzo netto, quindi 9,02 € di Iva. Vale per l'aliquota al 22%.",
+    "images": []
+   },
+   {
+    "text": "Per questo \"Iva compresa\" pesa meno del 22% sullo scontrino: su 100 € è il 18,03%. Esempio calcolato. Informazione generale, non consulenza.",
+    "images": []
+   },
+   {
+    "text": "Domanda: lo sapevi che l'Iva sullo scontrino non è il 22%? Rispondi: A) sì, lo sapevo B) no, scoperto adesso.",
+    "images": []
+   }
+  ]
+ },
+ {
+  "id": "2026-11-13-slot04-domanda-piccole-spese",
+  "when": "2026-11-13T20:00:00+01:00",
+  "images": [],
+  "text": "Domanda semplice: quanto spendi in un mese per caffè, snack e piccole spese fuori casa?\n\nRispondi: A) meno di 20 € B) tra 20 e 50 € C) più di 50 €."
+ },
+ {
+  "id": "2026-11-13-slot05-complotto-grande-reset",
+  "when": "2026-11-13T22:00:00+01:00",
+  "images": [
+   "img/2026-11-13-slot05.png"
+  ],
+  "text": "COMPLOTTO DEL GIORNO. Si dice: \"il Grande Reset ti toglierà tutto: non possederai nulla\".\n\nVerdetto: FALSA. Capisci perché circola, ma la frase viene da un articolo di previsioni del 2016: nessuna prova di un piano contro la proprietà.\nFonte: PolitiFact, Open"
+ }
+]
