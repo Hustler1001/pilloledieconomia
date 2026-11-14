@@ -275,9 +275,23 @@
    ],
    "attempts": 0,
    "done": true
+  },
+  "2026-11-14-slot03-mito-inflazione-scende": {
+   "ids": [
+    "2121686220560605299"
+   ],
+   "attempts": 0,
+   "done": true
+  },
+  "2026-11-14-slot04-domanda": {
+   "ids": [
+    "2121686230333325750"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-14": 2
+  "2026-11-14": 4
  }
 }
