@@ -264,9 +264,20 @@
    ],
    "attempts": 0,
    "done": true
+  },
+  "2026-11-14-slot01-fiducia-consumatori": {
+   "failed": "troppo in ritardo, saltato",
+   "ids": []
+  },
+  "2026-11-14-slot02-aumento-vs-inflazione": {
+   "ids": [
+    "2121610900700369164"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-14": 1
+  "2026-11-14": 2
  }
 }
