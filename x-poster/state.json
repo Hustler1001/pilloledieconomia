@@ -257,9 +257,16 @@
    ],
    "attempts": 0,
    "done": true
+  },
+  "2026-11-13-slot05-complotto-grande-reset": {
+   "ids": [
+    "2121405593634189701"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-13": 4
+  "2026-11-14": 1
  }
 }
