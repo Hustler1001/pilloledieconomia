@@ -39,3 +39,8 @@ Una riga per post: data · tema · numero/fonte. Non ripetere lo stesso tema pri
 - 2026-11-13 · Thread Iva 22% scorporo · 100 € → 18,03 € di Iva, 50 € → 9,02 € · DPR 633/1972 + calcolato
 - 2026-11-13 · Domanda ai lettori: piccole spese mensili (caffè, snack) · nessun dato
 - 2026-11-13 · Complotto del giorno: Grande Reset · FALSA · PolitiFact (28/09/2023), Open
+- 2026-11-14 · Fiducia consumatori ottobre 2026 · 90,3 da 91,2; imprese 96,6 da 95,9 · Istat
+- 2026-11-14 · Aumento 3% con inflazione 5,4% · 1.600 € → 1.648 € = 1.563,57 € reali, -2,28% · Istat + calcolato
+- 2026-11-14 · Mito inflazione che scende = prezzi che scendono · 100 → 105,40 → 107,51 € (2% ipotetico) · Istat + calcolato
+- 2026-11-14 · Domanda ai lettori: prezzo confezione o al chilo · nessun dato
+- 2026-11-14 · Complotto del giorno: lo Stato prende metà di ogni stipendio · MANCA IL CONTESTO, pressione fiscale 2025 43,1% del PIL (2024: 42,4%) · Istat 03/04/2026

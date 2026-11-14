@@ -1,0 +1,40 @@
+[
+ {
+  "id": "2026-11-14-slot01-fiducia-consumatori",
+  "when": "2026-11-14T09:00:00+01:00",
+  "images": [
+   "img/2026-11-14-slot01.png"
+  ],
+  "text": "La fiducia dei consumatori italiani scende a ottobre: indice a 90,3 da 91,2. Pesa il giudizio sull'economia generale e meno voglia di comprare beni durevoli.\n\nLe imprese vanno meglio: 96,6 da 95,9.\nFonte: Istat\n#Istat #fiducia"
+ },
+ {
+  "id": "2026-11-14-slot02-aumento-vs-inflazione",
+  "when": "2026-11-14T13:00:00+01:00",
+  "images": [
+   "img/2026-11-14-slot02.png"
+  ],
+  "text": "Ti danno +3% di stipendio, ma i prezzi corrono al 5,4% (Istat). Su 1.600 € netti: 1.648 € in busta, ma con il potere d'acquisto di prima valgono 1.563,57 €. Cioè -2,28%.\n\nEsempio calcolato. Informazione generale, non consulenza."
+ },
+ {
+  "id": "2026-11-14-slot03-mito-inflazione-scende",
+  "when": "2026-11-14T17:00:00+01:00",
+  "images": [
+   "img/2026-11-14-slot03.png"
+  ],
+  "text": "Mito: \"l'inflazione scende, quindi i prezzi scendono\". Falso. Scende la velocità con cui salgono.\n\nUn carrello da 100 € con +5,4% diventa 105,40 €. Con un altro +2% (ipotesi) sono 107,51 €. Il prezzo non torna indietro.\nFonte: Istat. Esempio calcolato."
+ },
+ {
+  "id": "2026-11-14-slot04-domanda",
+  "when": "2026-11-14T20:00:00+01:00",
+  "images": [],
+  "text": "Domanda semplice del sabato sera: al supermercato guardi il prezzo della confezione o il prezzo al chilo? E ti è mai capitato di accorgerti che quella più grande costava di più al chilo? Raccontami."
+ },
+ {
+  "id": "2026-11-14-slot05-complotto-meta-stipendio",
+  "when": "2026-11-14T22:00:00+01:00",
+  "images": [
+   "img/2026-11-14-slot05.png"
+  ],
+  "text": "COMPLOTTO DEL GIORNO. Vero o falso? \"Lo Stato si prende metà di ogni stipendio\".\n\nMANCA IL CONTESTO. Capisci perché circola, ma la pressione fiscale 2025 è 43,1% del PIL, non del tuo netto: dipende da reddito e contributi.\nFonte: Istat. Informazione generale, non consulenza."
+ }
+]
