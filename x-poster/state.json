@@ -322,9 +322,23 @@
    ],
    "attempts": 0,
    "done": true
+  },
+  "2026-11-15-slot04-domanda": {
+   "ids": [
+    "2122087317385216023"
+   ],
+   "attempts": 0,
+   "done": true
+  },
+  "2026-11-15-slot05-complotto-stampare-moneta": {
+   "ids": [
+    "2122087328047157604"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-15": 3
+  "2026-11-15": 5
  }
 }
