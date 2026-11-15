@@ -1,0 +1,62 @@
+[
+ {
+  "id": "2026-11-15-slot01-debito-agosto",
+  "when": "2026-11-15T09:00:00+01:00",
+  "images": [
+   "img/2026-11-15-slot01.png"
+  ],
+  "text": "Debito pubblico a fine agosto: 3.200,8 miliardi, 6,1 in meno rispetto a luglio (3.207,0).\n\nNello stesso mese il fabbisogno delle amministrazioni pubbliche è stato di 10,4 miliardi. Due numeri che non vanno sempre nella stessa direzione.\nFonte: Banca d'Italia (dati provvisori)"
+ },
+ {
+  "id": "2026-11-15-slot02-energia-bolletta",
+  "when": "2026-11-15T13:00:00+01:00",
+  "images": [
+   "img/2026-11-15-slot02.png"
+  ],
+  "text": "Energia +31,4% in un anno (Istat, indice dei prezzi). Se una spesa da 150 € al mese seguisse lo stesso aumento: 197,10 €. Sono 47,10 € in più al mese, 565,20 € all'anno.\n\nEsempio calcolato. Informazione generale, non consulenza."
+ },
+ {
+  "id": "2026-11-15-slot03-thread-tan-taeg",
+  "when": "2026-11-15T17:00:00+01:00",
+  "images": [
+   "img/2026-11-15-slot03.png"
+  ],
+  "text": "Ti offrono un prestito \"al 8%\". Ma 8% di cosa? TAN e TAEG sono due numeri diversi, e a pagare è il secondo.\n\nEsempio ipotetico: 5.000 € in 24 mesi, TAN 8%. Segui il filo.",
+  "thread": [
+   {
+    "text": "1/ Il TAN è il tasso d'interesse puro, senza costi accessori. Con 5.000 €, 24 mesi e TAN 8% la rata è 226,14 €. In totale rendi 5.427,27 €: 427,27 € di interessi.",
+    "images": []
+   },
+   {
+    "text": "2/ Ora aggiungi 150 € di spese di istruttoria (ipotesi). In mano ricevi 4.850 €, ma continui a pagare 24 rate da 226,14 €. Il costo totale sale a 577,27 €.",
+    "images": []
+   },
+   {
+    "text": "3/ Il TAEG per Banca d'Italia \"comprende gli interessi e tutte le altre spese\". Qui, con le spese da 150 €, viene circa 11,62% annuo. Il TAN diceva 8%, il costo reale è più alto.",
+    "images": []
+   },
+   {
+    "text": "4/ Per questo il TAEG si usa per confrontare le offerte: due prestiti con lo stesso TAN possono costare molto diverso. Va indicato negli annunci e nel contratto.\n\nInformazione generale, non consulenza.",
+    "images": []
+   },
+   {
+    "text": "5/ Ultima: nell'ultima offerta che hai guardato, ti hanno mostrato prima il TAN o il TAEG? Dimmi se te ne sei accorto.",
+    "images": []
+   }
+  ]
+ },
+ {
+  "id": "2026-11-15-slot04-domanda",
+  "when": "2026-11-15T20:00:00+01:00",
+  "images": [],
+  "text": "Domanda della domenica sera: quando ti arriva una bolletta, cosa guardi per primo? Il totale da pagare, i consumi o il prezzo al kWh? Sii sincero, nessuno ti giudica."
+ },
+ {
+  "id": "2026-11-15-slot05-complotto-stampare-moneta",
+  "when": "2026-11-15T22:00:00+01:00",
+  "images": [
+   "img/2026-11-15-slot05.png"
+  ],
+  "text": "COMPLOTTO DEL GIORNO. Vero o falso? \"Lo Stato potrebbe stampare moneta per il debito, ma non vuole\".\n\nMANCA IL CONTESTO. Capisci perché circola: l'art. 123 TFUE vieta alla BCE di comprare titoli di Stato direttamente dagli Stati.\nFonte: BCE, Trattato UE"
+ }
+]

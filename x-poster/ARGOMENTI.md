@@ -44,3 +44,8 @@ Una riga per post: data · tema · numero/fonte. Non ripetere lo stesso tema pri
 - 2026-11-14 · Mito inflazione che scende = prezzi che scendono · 100 → 105,40 → 107,51 € (2% ipotetico) · Istat + calcolato
 - 2026-11-14 · Domanda ai lettori: prezzo confezione o al chilo · nessun dato
 - 2026-11-14 · Complotto del giorno: lo Stato prende metà di ogni stipendio · MANCA IL CONTESTO, pressione fiscale 2025 43,1% del PIL (2024: 42,4%) · Istat 03/04/2026
+- 2026-11-15 · Debito pubblico agosto 2026 · 3.200,8 mld, -6,1 su luglio, fabbisogno 10,4 mld · Banca d'Italia (15/10/2026)
+- 2026-11-15 · Spesa energia 150 €/mese con +31,4% · 197,10 €/mese, +565,20 €/anno · Istat + calcolato
+- 2026-11-15 · Thread TAN vs TAEG · 5.000 € 24 mesi TAN 8%: rata 226,14 €, interessi 427,27 €, con 150 € spese TAEG ~11,62% · Banca d'Italia + calcolato, ipotetico
+- 2026-11-15 · Domanda ai lettori: cosa guardi per primo in bolletta · nessun dato
+- 2026-11-15 · Complotto del giorno: lo Stato potrebbe stampare moneta per il debito · MANCA IL CONTESTO, art. 123 TFUE · BCE
