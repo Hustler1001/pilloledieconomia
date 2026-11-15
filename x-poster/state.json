@@ -296,9 +296,16 @@
    ],
    "attempts": 0,
    "done": true
+  },
+  "2026-11-15-slot01-debito-agosto": {
+   "ids": [
+    "2121915628307058707"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-14": 5
+  "2026-11-15": 1
  }
 }
