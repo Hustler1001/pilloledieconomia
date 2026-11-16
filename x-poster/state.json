@@ -336,9 +336,16 @@
    ],
    "attempts": 0,
    "done": true
+  },
+  "2026-11-16-slot01-istat-previsioni": {
+   "ids": [
+    "2122259523641491635"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-15": 5
+  "2026-11-16": 1
  }
 }
