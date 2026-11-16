@@ -1,0 +1,62 @@
+[
+ {
+  "id": "2026-11-16-slot01-istat-previsioni",
+  "when": "2026-11-16T09:00:00+01:00",
+  "images": [
+   "img/2026-11-16-slot01.png"
+  ],
+  "text": "Istat, nota dell'11 novembre: il PIL italiano è atteso a +0,9% nel 2026 e +0,6% nel 2027.\n\nIl deflatore dei consumi delle famiglie, cioè i prezzi, sale a +3,3% nel 2026 e +2,8% nel 2027. Sono stime, non certezze.\nFonte: Istat"
+ },
+ {
+  "id": "2026-11-16-slot02-black-friday",
+  "when": "2026-11-16T13:00:00+01:00",
+  "images": [
+   "img/2026-11-16-slot02.png"
+  ],
+  "text": "Black Friday (27/11). Un prodotto costava 200 €, il negozio lo porta a 250 € e poi annuncia \"-30%\": 175 €.\n\nRispetto ai 200 € di prima il risparmio vero è del 12,5%, non del 30%. Guarda sempre il prezzo di ieri.\n\nEsempio calcolato. Informazione generale, non consulenza."
+ },
+ {
+  "id": "2026-11-16-slot03-thread-composto",
+  "when": "2026-11-16T17:00:00+01:00",
+  "images": [
+   "img/2026-11-16-slot03.png"
+  ],
+  "text": "1.000 € fermi per 20 anni al 3% annuo (ipotesi): con l'interesse semplice diventano 1.600 €, con il composto 1.806,11 €.\n\n206,11 € di differenza, per niente. Ti spiego come, in 5 passi.",
+  "thread": [
+   {
+    "text": "1/ Interesse semplice: ogni anno ricevi il 3% solo sui 1.000 € iniziali. Sono 30 € l'anno, per 20 anni fanno 600 €. Totale: 1.600 €.",
+    "images": []
+   },
+   {
+    "text": "2/ Composto: gli interessi entrano nel capitale e fruttano a loro volta. Dopo 1 anno hai 1.030 €, dopo 2 anni 1.060,90 €, dopo 20 anni 1.806,11 €.",
+    "images": []
+   },
+   {
+    "text": "3/ Il tempo pesa più di quanto pensi. Stesso 3%, ma 30 anni: composto 2.427,26 €, semplice 1.900 €. Il divario cresce ogni anno che passa.",
+    "images": []
+   },
+   {
+    "text": "4/ Attenzione: numeri al lordo di tasse e inflazione, e un rendimento del 3% fisso è solo un esempio. Nella realtà si può anche perdere.\n\nInformazione generale, non consulenza.",
+    "images": []
+   },
+   {
+    "text": "5/ Domanda: secondo te conta di più la cifra di partenza o il numero di anni? Scrivi la tua e il perché.",
+    "images": []
+   }
+  ]
+ },
+ {
+  "id": "2026-11-16-slot04-domanda-budget",
+  "when": "2026-11-16T20:00:00+01:00",
+  "images": [],
+  "text": "Lunedì sera, domanda semplice: il budget del mese lo tieni scritto (app o foglio), a memoria o a sensazione? Rispondi con una parola, senza vergogna."
+ },
+ {
+  "id": "2026-11-16-slot05-complotto-euro-prezzi",
+  "when": "2026-11-16T22:00:00+01:00",
+  "images": [
+   "img/2026-11-16-slot05.png"
+  ],
+  "text": "COMPLOTTO DEL GIORNO. Vero o falso? \"Con l'euro i prezzi sono raddoppiati\".\n\nMANCA IL CONTESTO. Capisci perché circola: molte cose costano di più. Ma l'indice Istat dei prezzi al consumo dice +63% tra 2000 e 2025, non +100%.\nFonte: Istat"
+ }
+]

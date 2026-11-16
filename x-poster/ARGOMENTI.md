@@ -49,3 +49,8 @@ Una riga per post: data · tema · numero/fonte. Non ripetere lo stesso tema pri
 - 2026-11-15 · Thread TAN vs TAEG · 5.000 € 24 mesi TAN 8%: rata 226,14 €, interessi 427,27 €, con 150 € spese TAEG ~11,62% · Banca d'Italia + calcolato, ipotetico
 - 2026-11-15 · Domanda ai lettori: cosa guardi per primo in bolletta · nessun dato
 - 2026-11-15 · Complotto del giorno: lo Stato potrebbe stampare moneta per il debito · MANCA IL CONTESTO, art. 123 TFUE · BCE
+- 2026-11-16 · Istat previsioni economia italiana · PIL +0,9% 2026, +0,6% 2027; deflatore consumi +3,3% / +2,8% · Istat (11/11/2026)
+- 2026-11-16 · Black Friday 200 € → 250 € e -30% · 175 €, sconto reale 12,5% · calcolato
+- 2026-11-16 · Thread interesse semplice vs composto · 1.000 € 20 anni 3%: 1.600 € vs 1.806,11 €; 30 anni 1.900 € vs 2.427,26 € · calcolato, ipotetico
+- 2026-11-16 · Domanda ai lettori: budget mensile scritto, a memoria o a sensazione · nessun dato
+- 2026-11-16 · Complotto del giorno: con l'euro prezzi raddoppiati · MANCA IL CONTESTO, NIC +63% 2000-2025 · Istat
