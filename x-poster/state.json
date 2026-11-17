@@ -380,9 +380,27 @@
    ],
    "attempts": 0,
    "done": true
+  },
+  "2026-11-17-slot02-prestito-durata": {
+   "failed": "troppo in ritardo, saltato",
+   "ids": []
+  },
+  "2026-11-17-slot03-mito-meno50": {
+   "ids": [
+    "2122780690219487376"
+   ],
+   "attempts": 0,
+   "done": true
+  },
+  "2026-11-17-slot04-domanda-emergenze": {
+   "ids": [
+    "2122780700050956701"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-17": 2
+  "2026-11-17": 4
  }
 }
