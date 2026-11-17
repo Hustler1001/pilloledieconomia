@@ -54,3 +54,8 @@ Una riga per post: data · tema · numero/fonte. Non ripetere lo stesso tema pri
 - 2026-11-16 · Thread interesse semplice vs composto · 1.000 € 20 anni 3%: 1.600 € vs 1.806,11 €; 30 anni 1.900 € vs 2.427,26 € · calcolato, ipotetico
 - 2026-11-16 · Domanda ai lettori: budget mensile scritto, a memoria o a sensazione · nessun dato
 - 2026-11-16 · Complotto del giorno: con l'euro prezzi raddoppiati · MANCA IL CONTESTO, NIC +63% 2000-2025 · Istat
+- 2026-11-17 · Commercio estero extra Ue settembre 2026 · export +5,4%, import +6,3%, saldo +2.826 mln, energia -5.727 (-3.438 un anno prima) · Istat (29/10/2026)
+- 2026-11-17 · Prestito 10.000 € TAN 7% 36 vs 60 mesi · rata 308,77 vs 198,01 €, interessi 1.115,75 vs 1.880,72 € (+765) · calcolato, ipotetico
+- 2026-11-17 · Mito -50% e +50% = pari · 100 → 50 → 75 €, serve +100% · calcolato, ipotetico
+- 2026-11-17 · Domanda ai lettori: mesi di spese coperti da risparmi · nessun dato
+- 2026-11-17 · Complotto del giorno: in banca ti prendono i soldi (bail-in) · MANCA IL CONTESTO, depositi protetti fino a 100.000 € per banca · Banca d'Italia

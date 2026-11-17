@@ -1,0 +1,40 @@
+[
+ {
+  "id": "2026-11-17-slot01-extra-ue",
+  "when": "2026-11-17T09:00:00+01:00",
+  "images": [
+   "img/2026-11-17-slot01.png"
+  ],
+  "text": "Commercio estero extra Ue, settembre: export +5,4% sull'anno, import +6,3%. Saldo +2.826 milioni di euro.\n\nIl conto dell'energia pesa: -5.727 milioni, contro -3.438 di un anno fa.\nFonte: Istat"
+ },
+ {
+  "id": "2026-11-17-slot02-prestito-durata",
+  "when": "2026-11-17T13:00:00+01:00",
+  "images": [
+   "img/2026-11-17-slot02.png"
+  ],
+  "text": "Prestito da 10.000 € al 7% (TAN). In 36 mesi: rata 308,77 €, interessi 1.115,75 €. In 60 mesi: rata 198,01 €, interessi 1.880,72 €.\n\nRata più bassa, ma 765 € in più di interessi.\nEsempio calcolato, tasso ipotetico. Informazione generale, non consulenza."
+ },
+ {
+  "id": "2026-11-17-slot03-mito-meno50",
+  "when": "2026-11-17T17:00:00+01:00",
+  "images": [
+   "img/2026-11-17-slot03.png"
+  ],
+  "text": "Mito: \"se un valore scende del 50% e poi sale del 50%, sono pari\".\n\nNo: 100 € → 50 € → 75 €. Per tornare a 100 serve +100%. Le perdite pesano più dei guadagni di pari percentuale.\nEsempio calcolato, ipotetico."
+ },
+ {
+  "id": "2026-11-17-slot04-domanda-emergenze",
+  "when": "2026-11-17T20:00:00+01:00",
+  "images": [],
+  "text": "Domanda semplice: se domani arrivasse una spesa imprevista, quanti mesi di spese fisse riusciresti a coprire con quello che hai da parte?\n\nPoco, qualche mese o nessuno? Rispondi pure a grandi linee."
+ },
+ {
+  "id": "2026-11-17-slot05-complotto-bail-in",
+  "when": "2026-11-17T22:00:00+01:00",
+  "images": [
+   "img/2026-11-17-slot05.png"
+  ],
+  "text": "COMPLOTTO DEL GIORNO: \"in banca ti prendono i soldi del conto\". MANCA IL CONTESTO.\n\nFino a 100.000 € per banca e per persona i depositi sono protetti. Sopra, l'eccedenza può finire nel bail-in, dopo gli altri debiti.\nFonte: Banca d'Italia"
+ }
+]
