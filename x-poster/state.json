@@ -366,9 +366,16 @@
    ],
    "attempts": 0,
    "done": true
+  },
+  "2026-11-16-slot05-complotto-euro-prezzi": {
+   "ids": [
+    "2122520071113486643"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-16": 3
+  "2026-11-17": 1
  }
 }
