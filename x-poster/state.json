@@ -405,9 +405,16 @@
    ],
    "attempts": 0,
    "done": true
+  },
+  "2026-11-18-slot01-inflazione-definitiva": {
+   "ids": [
+    "2122999570913218807"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-18": 1
+  "2026-11-18": 2
  }
 }
