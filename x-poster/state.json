@@ -398,9 +398,16 @@
    ],
    "attempts": 0,
    "done": true
+  },
+  "2026-11-17-slot05-complotto-bail-in": {
+   "ids": [
+    "2122877191096590771"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-17": 4
+  "2026-11-18": 1
  }
 }
