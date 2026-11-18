@@ -1,0 +1,62 @@
+[
+ {
+  "id": "2026-11-18-slot01-inflazione-definitiva",
+  "when": "2026-11-18T09:00:00+01:00",
+  "images": [
+   "img/2026-11-18-slot01.png"
+  ],
+  "text": "Inflazione di ottobre, dato definitivo: +5,5% sull'anno, un decimo sopra la stima iniziale (+5,4%).\n\nEnergia +31,9%, carrello della spesa +2,3%, inflazione di fondo +2,0%.\nFonte: Istat"
+ },
+ {
+  "id": "2026-11-18-slot02-spesa-carrello",
+  "when": "2026-11-18T13:00:00+01:00",
+  "images": [
+   "img/2026-11-18-slot02.png"
+  ],
+  "text": "Fai la spesa per 500 € al mese? Con il carrello a +2,3% diventano 511,50 €.\n\nSono 11,50 € in più al mese, 138 € in un anno, per comprare le stesse cose.\nEsempio calcolato su dato Istat. Informazione generale, non consulenza."
+ },
+ {
+  "id": "2026-11-18-slot03-thread-50-30-20",
+  "when": "2026-11-18T17:00:00+01:00",
+  "images": [
+   "img/2026-11-18-slot03.png"
+  ],
+  "text": "La regola 50/30/20 in 5 post, con numeri veri.\n\nÈ una regola empirica per dividere lo stipendio netto, non una legge. Esempio: 1.500 € al mese.",
+  "thread": [
+   {
+    "text": "1) Il 50% va ai bisogni: affitto o rata, bollette, spesa, trasporti.\n\nSu 1.500 € sono 750 €. Se i bisogni superano questa cifra, la regola non è sbagliata: ti sta mostrando dove stringe il budget.",
+    "images": []
+   },
+   {
+    "text": "2) Il 30% va alle voglie: ristoranti, abbonamenti, viaggi, hobby.\n\nSu 1.500 € sono 450 €. Una cifra che decidi tu, non quella che resta a caso a fine mese.",
+    "images": []
+   },
+   {
+    "text": "3) Il 20% va al risparmio: 300 € al mese.\n\nIn 5 anni sono 18.000 € messi da parte. Con un rendimento ipotetico del 3% annuo diventerebbero circa 19.394 €. Esempio calcolato: i rendimenti non sono garantiti e si può perdere.",
+    "images": []
+   },
+   {
+    "text": "4) Se 50/30/20 non ti torna, cambia le percentuali: 60/30/10, 70/20/10.\n\nConta più la regolarità che la formula. Informazione generale, non consulenza.",
+    "images": []
+   },
+   {
+    "text": "5) Domanda: oggi sai quanto spendi davvero in bisogni, voglie e risparmio, o è una stima a occhio?\n\nSe ti va, scrivi le tue percentuali approssimative.",
+    "images": []
+   }
+  ]
+ },
+ {
+  "id": "2026-11-18-slot04-domanda-sconto",
+  "when": "2026-11-18T20:00:00+01:00",
+  "images": [],
+  "text": "Domanda curiosa: qual è l'ultima cosa che hai comprato solo perché era in sconto?\n\nL'hai usata davvero o è finita in un cassetto? Racconta pure, senza giudizio."
+ },
+ {
+  "id": "2026-11-18-slot05-complotto-bankitalia",
+  "when": "2026-11-18T22:00:00+01:00",
+  "images": [
+   "img/2026-11-18-slot05.png"
+  ],
+  "text": "COMPLOTTO DEL GIORNO: \"Bankitalia è in mano a banche private\". MANCA IL CONTESTO.\n\nIl capitale è di 7,5 miliardi e lo detengono banche, assicurazioni e altri enti. Ma il dividendo è limitato al 6% (450 milioni) e il resto va allo Stato.\nFonte: Banca d'Italia"
+ }
+]

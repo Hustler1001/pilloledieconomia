@@ -59,3 +59,8 @@ Una riga per post: data · tema · numero/fonte. Non ripetere lo stesso tema pri
 - 2026-11-17 · Mito -50% e +50% = pari · 100 → 50 → 75 €, serve +100% · calcolato, ipotetico
 - 2026-11-17 · Domanda ai lettori: mesi di spese coperti da risparmi · nessun dato
 - 2026-11-17 · Complotto del giorno: in banca ti prendono i soldi (bail-in) · MANCA IL CONTESTO, depositi protetti fino a 100.000 € per banca · Banca d'Italia
+- 2026-11-18 · Inflazione ottobre 2026 definitiva · +5,5% (stima +5,4%), energia +31,9%, carrello +2,3%, core +2,0% · Istat (17/11/2026)
+- 2026-11-18 · Spesa 500 €/mese con carrello +2,3% · 511,50 €/mese, +138 €/anno · Istat + calcolato
+- 2026-11-18 · Thread regola 50/30/20 · 1.500 € → 750/450/300; 300 €/mese x 5 anni = 18.000 €, 19.394 € al 3% ipotetico · calcolato
+- 2026-11-18 · Domanda ai lettori: ultima cosa comprata solo per lo sconto · nessun dato
+- 2026-11-18 · Complotto del giorno: Bankitalia in mano a banche private · MANCA IL CONTESTO, capitale 7,5 mld, dividendo max 6% = 450 mln, 2025 340 mln · Banca d'Italia
