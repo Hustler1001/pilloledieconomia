@@ -428,9 +428,20 @@
    ],
    "attempts": 0,
    "done": true
+  },
+  "2026-11-18-slot04-domanda-sconto": {
+   "failed": "troppo in ritardo, saltato",
+   "ids": []
+  },
+  "2026-11-18-slot05-complotto-bankitalia": {
+   "ids": [
+    "2123221104592617809"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-18": 3
+  "2026-11-19": 1
  }
 }
