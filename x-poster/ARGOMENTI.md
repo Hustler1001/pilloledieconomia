@@ -64,3 +64,8 @@ Una riga per post: data · tema · numero/fonte. Non ripetere lo stesso tema pri
 - 2026-11-18 · Thread regola 50/30/20 · 1.500 € → 750/450/300; 300 €/mese x 5 anni = 18.000 €, 19.394 € al 3% ipotetico · calcolato
 - 2026-11-18 · Domanda ai lettori: ultima cosa comprata solo per lo sconto · nessun dato
 - 2026-11-18 · Complotto del giorno: Bankitalia in mano a banche private · MANCA IL CONTESTO, capitale 7,5 mld, dividendo max 6% = 450 mln, 2025 340 mln · Banca d'Italia
+- 2026-11-19 · Debito pubblico settembre 2026 · 3.211,6 mld, +10,8 su agosto, fabbisogno 27,7 mld, liquidità Tesoro -18,1 (41,0) · Banca d'Italia (16/11/2026)
+- 2026-11-19 · 24 rate a tasso zero su 1.000 € vs 950 € subito · rata 41,67 €, costo implicito 5,09% l'anno effettivo · calcolato, ipotetico
+- 2026-11-19 · Mito 1% al mese = 12% l'anno · 1.000 → 1.126,83 €, +12,68% · calcolato, ipotetico
+- 2026-11-19 · Domanda ai lettori: come paghi il caffè al bar · nessun dato
+- 2026-11-19 · Complotto del giorno: i soldi sul conto sono della banca · IN PARTE VERA, art. 1834 c.c., tutela 100.000 € per banca · Codice civile, Banca d'Italia

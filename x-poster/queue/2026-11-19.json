@@ -1,0 +1,40 @@
+[
+ {
+  "id": "2026-11-19-slot01-debito-settembre",
+  "when": "2026-11-19T09:00:00+01:00",
+  "images": [
+   "img/2026-11-19-slot01.png"
+  ],
+  "text": "Debito pubblico a settembre: 3.211,6 miliardi, +10,8 su agosto.\n\nFabbisogno del mese 27,7 miliardi; il calo di 18,1 miliardi della liquidità del Tesoro (ora 41,0) ne ha frenato la crescita.\nFonte: Banca d'Italia"
+ },
+ {
+  "id": "2026-11-19-slot02-rate-zero-sconto",
+  "when": "2026-11-19T13:00:00+01:00",
+  "images": [
+   "img/2026-11-19-slot02.png"
+  ],
+  "text": "Black Friday: 1.000 € in 24 rate da 41,67 € a tasso zero, oppure 950 € subito.\n\nRateizzando rinunci a 50 €: come un prestito al 5,1% l'anno effettivo. Non sempre è un errore, ma il costo c'è.\nEsempio calcolato. Informazione generale, non consulenza."
+ },
+ {
+  "id": "2026-11-19-slot03-mito-1-al-mese",
+  "when": "2026-11-19T17:00:00+01:00",
+  "images": [
+   "img/2026-11-19-slot03.png"
+  ],
+  "text": "MITO: \"1% al mese sono 12% l'anno\". Non proprio.\n\nGli interessi si sommano mese dopo mese: 1.000 € diventano 1.126,83 € in un anno, +12,68%. Vale per i debiti, e per i rendimenti ipotetici (non garantiti).\nEsempio calcolato."
+ },
+ {
+  "id": "2026-11-19-slot04-domanda-bar",
+  "when": "2026-11-19T20:00:00+01:00",
+  "images": [],
+  "text": "Domanda curiosa: al bar, di solito come paghi il caffè? Carta, contanti o telefono?\n\nE negli ultimi anni hai cambiato abitudine? Racconta pure."
+ },
+ {
+  "id": "2026-11-19-slot05-complotto-soldi-conto",
+  "when": "2026-11-19T22:00:00+01:00",
+  "images": [
+   "img/2026-11-19-slot05.png"
+  ],
+  "text": "COMPLOTTO DEL GIORNO: \"I soldi sul conto non sono tuoi, sono della banca\". IN PARTE VERA.\n\nPer l'art. 1834 del Codice civile la banca ne acquista la proprietà, ma deve restituirli a richiesta: hai un credito, tutelato fino a 100.000 € per banca.\nFonte: Codice civile"
+ }
+]
