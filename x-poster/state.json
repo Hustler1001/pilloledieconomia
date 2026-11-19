@@ -446,9 +446,23 @@
    ],
    "attempts": 0,
    "done": true
+  },
+  "2026-11-19-slot02-rate-zero-sconto": {
+   "ids": [
+    "2123472479444218311"
+   ],
+   "attempts": 0,
+   "done": true
+  },
+  "2026-11-19-slot03-mito-1-al-mese": {
+   "ids": [
+    "2123472491213414745"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-19": 2
+  "2026-11-19": 4
  }
 }
