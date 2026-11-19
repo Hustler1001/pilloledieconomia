@@ -460,9 +460,23 @@
    ],
    "attempts": 0,
    "done": true
+  },
+  "2026-11-19-slot04-domanda-bar": {
+   "ids": [
+    "2123565779115299312"
+   ],
+   "attempts": 0,
+   "done": true
+  },
+  "2026-11-19-slot05-complotto-soldi-conto": {
+   "ids": [
+    "2123565790523769041"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-19": 4
+  "2026-11-19": 6
  }
 }
