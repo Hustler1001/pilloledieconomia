@@ -439,9 +439,16 @@
    ],
    "attempts": 0,
    "done": true
+  },
+  "2026-11-19-slot01-debito-settembre": {
+   "ids": [
+    "2123336895916581118"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-19": 1
+  "2026-11-19": 2
  }
 }
