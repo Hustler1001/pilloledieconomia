@@ -1,0 +1,62 @@
+[
+ {
+  "id": "2026-11-20-slot01-saldo-imu",
+  "when": "2026-11-20T09:00:00+01:00",
+  "images": [
+   "img/2026-11-20-slot01.png"
+  ],
+  "text": "Il saldo IMU 2026 scade il 16 dicembre: mancano 26 giorni.\n\nSi paga la differenza tra l'imposta dovuta con le aliquote del tuo Comune e l'acconto di giugno. L'abitazione principale è esente, tranne A/1, A/8, A/9.\nFonte: L. 160/2019"
+ },
+ {
+  "id": "2026-11-20-slot02-calcolo-imu",
+  "when": "2026-11-20T13:00:00+01:00",
+  "images": [
+   "img/2026-11-20-slot02.png"
+  ],
+  "text": "Seconda casa con rendita 800 €? Base imponibile: 800 x 1,05 x 160 = 134.400 €. Con aliquota base 0,86%: IMU annua 1.155,84 €, saldo di dicembre 577,92 €.\n\nEsempio calcolato: il tuo Comune può avere un'aliquota diversa. Informazione generale, non consulenza."
+ },
+ {
+  "id": "2026-11-20-slot03-thread-blackfriday",
+  "when": "2026-11-20T17:00:00+01:00",
+  "images": [
+   "img/2026-11-20-slot03.png"
+  ],
+  "text": "Black Friday senza fregature: 4 conti da fare prima di comprare.\n\nSono esempi calcolati con numeri semplici, valgono per qualsiasi negozio.",
+  "thread": [
+   {
+    "text": "1) Black Friday è il 27 novembre. Prima di cliccare, 4 conti da fare in 10 secondi.\n\nNon servono formule: servono un prezzo, una spedizione e una domanda onesta.",
+    "images": []
+   },
+   {
+    "text": "2) Costo per uso. Scarpe da 120 € che metti 60 volte: 2 € a uso. Scarpe in saldo da 40 € che metti 10 volte: 4 € a uso.\n\nIl prezzo più basso non è sempre quello che costa meno.",
+    "images": []
+   },
+   {
+    "text": "3) La spedizione si mangia lo sconto. Articolo da 100 € con -20% fa 80 €, più 9,90 € di spedizione: 89,90 €.\n\nSconto reale: 10,1%, non 20%.",
+    "images": []
+   },
+   {
+    "text": "4) Compra 3, paghi 2. Tre pezzi da 30 € costano 60 €: sconto del 33,3%.\n\nMa se te ne serviva uno, hai speso 60 € invece di 30 €. Lo sconto vale solo su ciò che avresti comprato comunque.",
+    "images": []
+   },
+   {
+    "text": "Informazione generale, non consulenza. Esempi calcolati con numeri inventati.\n\nDomanda: quale di questi 4 conti non avevi mai fatto prima?",
+    "images": []
+   }
+  ]
+ },
+ {
+  "id": "2026-11-20-slot04-domanda-sconti",
+  "when": "2026-11-20T20:00:00+01:00",
+  "images": [],
+  "text": "Domanda semplice: a Natale compri i regali in anticipo o ti riduci agli ultimi giorni?\n\nE quando cerchi un'offerta, guardi il prezzo finale o la percentuale di sconto?"
+ },
+ {
+  "id": "2026-11-20-slot05-complotto-inflazione-stampa",
+  "when": "2026-11-20T22:00:00+01:00",
+  "images": [
+   "img/2026-11-20-slot05.png"
+  ],
+  "text": "COMPLOTTO DEL GIORNO: \"L'inflazione c'è perché si stampano troppi soldi\".\n\nVerdetto: MANCA IL CONTESTO. A ottobre +5,5%, ma l'energia sale del 31,9% e l'inflazione di fondo è +2,0%. Capisco perché circola, ma i dati dicono altro.\nFonte: Istat"
+ }
+]

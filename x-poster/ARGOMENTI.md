@@ -69,3 +69,8 @@ Una riga per post: data · tema · numero/fonte. Non ripetere lo stesso tema pri
 - 2026-11-19 · Mito 1% al mese = 12% l'anno · 1.000 → 1.126,83 €, +12,68% · calcolato, ipotetico
 - 2026-11-19 · Domanda ai lettori: come paghi il caffè al bar · nessun dato
 - 2026-11-19 · Complotto del giorno: i soldi sul conto sono della banca · IN PARTE VERA, art. 1834 c.c., tutela 100.000 € per banca · Codice civile, Banca d'Italia
+- 2026-11-20 · Saldo IMU 2026 scade 16/12 · 26 giorni, abitazione principale esente salvo A/1 A/8 A/9 · L. 160/2019
+- 2026-11-20 · Saldo IMU seconda casa rendita 800 € · base 134.400 €, IMU 1.155,84 €, saldo 577,92 € · calcolato, ipotetico
+- 2026-11-20 · Thread Black Friday 4 conti · costo per uso 2 vs 4 €, spedizione -20% → -10,1%, 3x2 = 33,3% · calcolato, ipotetico
+- 2026-11-20 · Domanda ai lettori: regali di Natale in anticipo e sconti · nessun dato
+- 2026-11-20 · Complotto del giorno: inflazione colpa della stampa di moneta · MANCA IL CONTESTO, +5,5%, energia +31,9%, fondo +2,0% · Istat (17/11/2026)
