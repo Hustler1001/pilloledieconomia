@@ -474,9 +474,20 @@
    ],
    "attempts": 0,
    "done": true
+  },
+  "2026-11-20-slot01-saldo-imu": {
+   "failed": "troppo in ritardo, saltato",
+   "ids": []
+  },
+  "2026-11-20-slot02-calcolo-imu": {
+   "ids": [
+    "2123808501885538766"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-19": 6
+  "2026-11-20": 1
  }
 }
