@@ -485,9 +485,27 @@
    ],
    "attempts": 0,
    "done": true
+  },
+  "2026-11-20-slot03-thread-blackfriday": {
+   "failed": "troppo in ritardo, saltato",
+   "ids": []
+  },
+  "2026-11-20-slot04-domanda-sconti": {
+   "ids": [
+    "2123908748859338980"
+   ],
+   "attempts": 0,
+   "done": true
+  },
+  "2026-11-20-slot05-complotto-inflazione-stampa": {
+   "ids": [
+    "2123908759500226891"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-20": 1
+  "2026-11-20": 3
  }
 }
