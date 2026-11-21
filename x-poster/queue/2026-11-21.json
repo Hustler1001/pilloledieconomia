@@ -1,0 +1,40 @@
+[
+ {
+  "id": "2026-11-21-slot01-costruzioni",
+  "when": "2026-11-21T09:00:00+01:00",
+  "images": [
+   "img/2026-11-21-slot01.png"
+  ],
+  "text": "Istat: a settembre la produzione nelle costruzioni sale del 3,9% su agosto, ma resta sotto dello 0,1% sul settembre 2025. Nel terzo trimestre il calo è del 3,1%. Nei primi nove mesi del 2026 l'indice grezzo è +1,9%.\nFonte: Istat"
+ },
+ {
+  "id": "2026-11-21-slot02-revolving",
+  "when": "2026-11-21T13:00:00+01:00",
+  "images": [
+   "img/2026-11-21-slot02.png"
+  ],
+  "text": "1.000 € sulla carta revolving, rimborsati 50 € al mese con interessi al 15% annuo: servono 24 mesi e paghi 157,95 € di interessi (totale 1.157,95 €).\n\nEsempio calcolato, tasso ipotetico. Informazione generale, non consulenza."
+ },
+ {
+  "id": "2026-11-21-slot03-mito-conto",
+  "when": "2026-11-21T17:00:00+01:00",
+  "images": [
+   "img/2026-11-21-slot03.png"
+  ],
+  "text": "Mito: \"i soldi fermi sul conto non perdono valore\". Con inflazione al 5,5% (Istat, ottobre), 10.000 € a rendimento zero tra un anno comprano quanto 9.478,67 €: -521,33 € di potere d'acquisto.\n\nEsempio calcolato."
+ },
+ {
+  "id": "2026-11-21-slot04-domanda-tredicesima",
+  "when": "2026-11-21T20:00:00+01:00",
+  "images": [],
+  "text": "Quando arriva la tredicesima, dove va prima il primo euro: bollette e debiti, risparmio, regali o una cosa che ti sei promesso? Racconta la tua priorità."
+ },
+ {
+  "id": "2026-11-21-slot05-complotto-500",
+  "when": "2026-11-21T22:00:00+01:00",
+  "images": [
+   "img/2026-11-21-slot05.png"
+  ],
+  "text": "COMPLOTTO DEL GIORNO. Vero o falso? \"Hanno ritirato il 500 € e ora non vale più.\"\n\nMANCA IL CONTESTO: la BCE ha smesso di produrlo ed emetterlo (decisione 2016), ma resta a corso legale e conserva il suo valore. Fonte: BCE"
+ }
+]

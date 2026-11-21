@@ -74,3 +74,8 @@ Una riga per post: data · tema · numero/fonte. Non ripetere lo stesso tema pri
 - 2026-11-20 · Thread Black Friday 4 conti · costo per uso 2 vs 4 €, spedizione -20% → -10,1%, 3x2 = 33,3% · calcolato, ipotetico
 - 2026-11-20 · Domanda ai lettori: regali di Natale in anticipo e sconti · nessun dato
 - 2026-11-20 · Complotto del giorno: inflazione colpa della stampa di moneta · MANCA IL CONTESTO, +5,5%, energia +31,9%, fondo +2,0% · Istat (17/11/2026)
+- 2026-11-21 · Costruzioni settembre 2026 · +3,9% su agosto, -0,1% annuo, III trim. -3,1%, nove mesi grezzo +1,9% · Istat (20/11/2026)
+- 2026-11-21 · Carta revolving 1.000 € a 50 €/mese · 24 mesi, interessi 157,95 € (TAN 15% ipotetico) · calcolato
+- 2026-11-21 · Mito soldi fermi sul conto non perdono valore · 10.000 € con +5,5% = 9.478,67 €, -521,33 € · Istat + calcolato
+- 2026-11-21 · Domanda ai lettori: priorità della tredicesima · nessun dato
+- 2026-11-21 · Complotto del giorno: ritirato il 500 € e non vale più · MANCA IL CONTESTO, stop emissione 2016, corso legale · BCE (04/05/2016)
