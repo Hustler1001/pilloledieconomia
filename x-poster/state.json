@@ -521,9 +521,23 @@
    ],
    "attempts": 0,
    "done": true
+  },
+  "2026-11-21-slot04-domanda-tredicesima": {
+   "ids": [
+    "2124283959538307114"
+   ],
+   "attempts": 0,
+   "done": true
+  },
+  "2026-11-21-slot05-complotto-500": {
+   "ids": [
+    "2124283970833555680"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-21": 2
+  "2026-11-21": 4
  }
 }
