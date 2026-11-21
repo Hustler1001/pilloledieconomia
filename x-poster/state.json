@@ -510,9 +510,20 @@
    ],
    "attempts": 0,
    "done": true
+  },
+  "2026-11-21-slot02-revolving": {
+   "failed": "troppo in ritardo, saltato",
+   "ids": []
+  },
+  "2026-11-21-slot03-mito-conto": {
+   "ids": [
+    "2124205512996921807"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-21": 1
+  "2026-11-21": 2
  }
 }
