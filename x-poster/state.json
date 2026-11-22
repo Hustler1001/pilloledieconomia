@@ -535,9 +535,16 @@
    ],
    "attempts": 0,
    "done": true
+  },
+  "2026-11-22-slot01-prezzi-import": {
+   "ids": [
+    "2124471693808988223"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-21": 4
+  "2026-11-22": 1
  }
 }
