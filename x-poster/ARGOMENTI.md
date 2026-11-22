@@ -79,3 +79,8 @@ Una riga per post: data · tema · numero/fonte. Non ripetere lo stesso tema pri
 - 2026-11-21 · Mito soldi fermi sul conto non perdono valore · 10.000 € con +5,5% = 9.478,67 €, -521,33 € · Istat + calcolato
 - 2026-11-21 · Domanda ai lettori: priorità della tredicesima · nessun dato
 - 2026-11-21 · Complotto del giorno: ritirato il 500 € e non vale più · MANCA IL CONTESTO, stop emissione 2016, corso legale · BCE (04/05/2016)
+- 2026-11-22 · Prezzi all'import settembre 2026 · +1,9% m/m, +9,6% a/a (agosto +7,3%), deficit energetico 5.887 mln (3.778 un anno prima) · Istat (13/11/2026)
+- 2026-11-22 · Stipendio 1.800 € con inflazione 5,5% · serve 1.899 €, +99 €/mese, 1.188 € su 12 mensilità · Istat + calcolato
+- 2026-11-22 · Thread punti percentuali vs percentuale · 2,50%→2,75% = +0,25 punti, +10%; import 7,3→9,6 = +2,3 punti, +31,5%; mutuo 150.000 € 3%→3,5% rata 711,32→750,94 € · Istat + calcolato, ipotetico
+- 2026-11-22 · Domanda ai lettori: ultimo confronto offerte luce e gas · nessun dato
+- 2026-11-22 · Complotto del giorno: lo Stato tassa i soldi fermi sul conto · MANCA IL CONTESTO, bollo 34,20 €/anno, giacenza media > 5.000 €, su 10.000 € = 0,34% · DPR 642/1972, Agenzia delle Entrate
