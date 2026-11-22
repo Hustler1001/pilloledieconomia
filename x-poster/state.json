@@ -542,9 +542,31 @@
    ],
    "attempts": 0,
    "done": true
+  },
+  "2026-11-22-slot02-stipendio-inflazione": {
+   "failed": "troppo in ritardo, saltato",
+   "ids": []
+  },
+  "2026-11-22-slot03-thread-punti-percentuali": {
+   "ids": [
+    "2124584519302832565",
+    "2124584529423749409",
+    "2124584539619987574",
+    "2124584549703094673",
+    "2124584559543009441"
+   ],
+   "attempts": 0,
+   "done": true
+  },
+  "2026-11-22-slot04-domanda-fornitore": {
+   "ids": [
+    "2124584569005388014"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-22": 1
+  "2026-11-22": 3
  }
 }
