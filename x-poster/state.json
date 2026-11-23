@@ -564,9 +564,16 @@
    ],
    "attempts": 0,
    "done": true
+  },
+  "2026-11-22-slot05-complotto-bollo": {
+   "ids": [
+    "2124660619915993185"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-22": 3
+  "2026-11-23": 1
  }
 }
