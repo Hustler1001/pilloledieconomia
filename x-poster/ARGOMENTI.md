@@ -84,3 +84,8 @@ Una riga per post: data · tema · numero/fonte. Non ripetere lo stesso tema pri
 - 2026-11-22 · Thread punti percentuali vs percentuale · 2,50%→2,75% = +0,25 punti, +10%; import 7,3→9,6 = +2,3 punti, +31,5%; mutuo 150.000 € 3%→3,5% rata 711,32→750,94 € · Istat + calcolato, ipotetico
 - 2026-11-22 · Domanda ai lettori: ultimo confronto offerte luce e gas · nessun dato
 - 2026-11-22 · Complotto del giorno: lo Stato tassa i soldi fermi sul conto · MANCA IL CONTESTO, bollo 34,20 €/anno, giacenza media > 5.000 €, su 10.000 € = 0,34% · DPR 642/1972, Agenzia delle Entrate
+- 2026-11-23 · Imprese a controllo estero 2024 · valore aggiunto 196 mld, +4,1% · Istat (10/11/2026)
+- 2026-11-23 · 3 abbonamenti da 12,99 €/mese · 38,97 €/mese, 467,64 €/anno, 4.676,40 € in 10 anni · calcolato
+- 2026-11-23 · Thread composizione rata prestito · 10.000 € 36 mesi TAN 7%: rata 308,77, 1ª rata 58,33 interessi, residuo dopo 12 rate 6.896,43 €, interessi totali 1.115,75 · calcolato, ipotetico
+- 2026-11-23 · Domanda ai lettori: regalo oggetto o esperienza · nessun dato
+- 2026-11-23 · Complotto del giorno: lo Stato può prelevare dal conto · IN PARTE VERA, 1992 6 per mille una tantum (60 € su 10.000), nessuna norma analoga oggi · DL 333/1992 art. 7, Corte cost. 143/1995

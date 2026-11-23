@@ -1,0 +1,62 @@
+[
+ {
+  "id": "2026-11-23-slot01-multinazionali",
+  "when": "2026-11-23T09:00:00+01:00",
+  "images": [
+   "img/2026-11-23-slot01.png"
+  ],
+  "text": "Istat: nel 2024 il valore aggiunto delle imprese a controllo estero in Italia arriva a 196 miliardi di euro, +4,1% rispetto all'anno prima. Sono le multinazionali con sede estera che producono in Italia.\nFonte: Istat (10/11/2026)"
+ },
+ {
+  "id": "2026-11-23-slot02-abbonamenti",
+  "when": "2026-11-23T13:00:00+01:00",
+  "images": [
+   "img/2026-11-23-slot02.png"
+  ],
+  "text": "Tre abbonamenti da 12,99 € al mese sembrano niente: 38,97 € al mese, 467,64 € all'anno, 4.676,40 € in dieci anni a prezzi invariati.\n\nEsempio calcolato. Informazione generale, non consulenza."
+ },
+ {
+  "id": "2026-11-23-slot03-thread-rata",
+  "when": "2026-11-23T17:00:00+01:00",
+  "images": [
+   "img/2026-11-23-slot03.png"
+  ],
+  "text": "Cosa c'è dentro la rata di un prestito? Esempio ipotetico: 10.000 € in 36 mesi, TAN 7%, rata 308,77 €. Non è tutta capitale: una parte sono interessi, e cambia ogni mese. Thread, 4 conti.",
+  "thread": [
+   {
+    "text": "1) Prima rata: 58,33 € di interessi e 250,44 € di capitale. Gli interessi si calcolano sul debito che hai ancora: all'inizio è tutto, quindi pesano di più.",
+    "images": []
+   },
+   {
+    "text": "2) Dodicesima rata: gli interessi scendono a 41,79 € e il capitale sale a 266,98 €. La rata resta 308,77 €, ma cambia la sua composizione.",
+    "images": []
+   },
+   {
+    "text": "3) Ultima rata, la 36ª: appena 1,79 € di interessi e 306,98 € di capitale. In totale gli interessi sono 1.115,75 € su 10.000 €.",
+    "images": []
+   },
+   {
+    "text": "4) Dopo 12 rate hai pagato 3.705,24 €, ma il debito residuo non è 6.294,76 €: è 6.896,43 €. Perché parte di quanto versato erano interessi. Esempio calcolato, tassi ipotetici. Informazione generale, non consulenza.",
+    "images": []
+   },
+   {
+    "text": "E tu, quando firmi un finanziamento, guardi prima la rata, il TAN o il costo totale degli interessi?",
+    "images": []
+   }
+  ]
+ },
+ {
+  "id": "2026-11-23-slot04-domanda-natale",
+  "when": "2026-11-23T20:00:00+01:00",
+  "images": [],
+  "text": "Domanda semplice: a Natale preferisci ricevere un oggetto o un'esperienza (cena, biglietti, viaggio)? E quando regali tu, cosa scegli? Rispondi pure con una parola sola."
+ },
+ {
+  "id": "2026-11-23-slot05-complotto-prelievo-1992",
+  "when": "2026-11-23T22:00:00+01:00",
+  "images": [
+   "img/2026-11-23-slot05.png"
+  ],
+  "text": "COMPLOTTO DEL GIORNO: \"Lo Stato può prelevarti soldi dal conto.\" Verdetto: IN PARTE VERA. Nel 1992 ci fu un prelievo una tantum del 6 per mille (DL 333/1992): su 10.000 € sono 60 €. Fu eccezionale; oggi non risulta una norma uguale. Fonte: Corte cost. 143/1995"
+ }
+]
