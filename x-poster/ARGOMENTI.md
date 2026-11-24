@@ -89,3 +89,8 @@ Una riga per post: data · tema · numero/fonte. Non ripetere lo stesso tema pri
 - 2026-11-23 · Thread composizione rata prestito · 10.000 € 36 mesi TAN 7%: rata 308,77, 1ª rata 58,33 interessi, residuo dopo 12 rate 6.896,43 €, interessi totali 1.115,75 · calcolato, ipotetico
 - 2026-11-23 · Domanda ai lettori: regalo oggetto o esperienza · nessun dato
 - 2026-11-23 · Complotto del giorno: lo Stato può prelevare dal conto · IN PARTE VERA, 1992 6 per mille una tantum (60 € su 10.000), nessuna norma analoga oggi · DL 333/1992 art. 7, Corte cost. 143/1995
+- 2026-11-24 · Flussi turistici III trim. 2026 · 249 mln presenze +3,0%, arrivi -0,5%, stranieri +6,4%, italiani -1,0% · Istat (23/11/2026)
+- 2026-11-24 · Caffè al bar 1,40 € · 336 €/anno, 3.360 € in 10 anni · calcolato, ipotetico
+- 2026-11-24 · Mito IVA 22% = 22% del prezzo · 122 € → IVA 22 €, 18,03%; su 1.000 € = 180,33 € · calcolato
+- 2026-11-24 · Domanda ai lettori: IVA nel prezzo, conto o solo totale · nessun dato
+- 2026-11-24 · Complotto del giorno: Istat trucca l'inflazione · MANCA IL CONTESTO, 29 mln quotazioni/mese, 80 comuni 84% popolazione, 531 aggregati · Istat paniere 2026

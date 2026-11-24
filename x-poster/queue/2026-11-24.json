@@ -1,0 +1,40 @@
+[
+ {
+  "id": "2026-11-24-slot01-turismo",
+  "when": "2026-11-24T09:00:00+01:00",
+  "images": [
+   "img/2026-11-24-slot01.png"
+  ],
+  "text": "Istat: nel terzo trimestre 2026 gli alloggi turistici italiani hanno registrato 249 milioni di presenze, +3,0% sul 2025. Gli arrivi calano dello 0,5%. Gli stranieri crescono del 6,4%, gli italiani calano dell'1,0%.\nFonte: Istat (23/11/2026)"
+ },
+ {
+  "id": "2026-11-24-slot02-caffe",
+  "when": "2026-11-24T13:00:00+01:00",
+  "images": [
+   "img/2026-11-24-slot02.png"
+  ],
+  "text": "Un caffè al bar a 1,40 € sembra niente. Ogni giorno lavorativo, per 48 settimane, fa 336 € all'anno e 3.360 € in dieci anni a prezzo invariato.\n\nEsempio calcolato, prezzo ipotetico. Informazione generale, non consulenza."
+ },
+ {
+  "id": "2026-11-24-slot03-mito-iva",
+  "when": "2026-11-24T17:00:00+01:00",
+  "images": [
+   "img/2026-11-24-slot03.png"
+  ],
+  "text": "MITO: \"l'IVA al 22% è il 22% di quello che pago\". Falso. Su 100 € di imponibile paghi 122 €: l'IVA è 22 €, cioè il 18,03% del prezzo finale. Su uno scontrino da 1.000 € sono 180,33 € di IVA.\nEsempio calcolato."
+ },
+ {
+  "id": "2026-11-24-slot04-domanda",
+  "when": "2026-11-24T20:00:00+01:00",
+  "images": [],
+  "text": "Domanda semplice: quando ti arriva un prezzo con IVA inclusa, fai mai il conto di quanto è IVA e quanto è prezzo vero? Oppure guardi solo il totale e basta?"
+ },
+ {
+  "id": "2026-11-24-slot05-complotto-istat",
+  "when": "2026-11-24T22:00:00+01:00",
+  "images": [
+   "img/2026-11-24-slot05.png"
+  ],
+  "text": "COMPLOTTO DEL GIORNO: \"l'Istat trucca l'inflazione\". Capisco perché circola. Verdetto: MANCA IL CONTESTO. Ogni mese usa oltre 29 milioni di prezzi in 80 comuni (84% della popolazione). Ma è una media: il tuo carrello può essere diverso.\nFonte: Istat, paniere 2026"
+ }
+]
