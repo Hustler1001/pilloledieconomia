@@ -605,9 +605,20 @@
   "2026-11-23-slot05-complotto-prelievo-1992": {
    "failed": "troppo in ritardo, saltato",
    "ids": []
+  },
+  "2026-11-24-slot01-turismo": {
+   "failed": "troppo in ritardo, saltato",
+   "ids": []
+  },
+  "2026-11-24-slot02-caffe": {
+   "ids": [
+    "2125249627473555716"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-24": 0
+  "2026-11-24": 1
  }
 }
