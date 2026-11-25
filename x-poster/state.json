@@ -634,9 +634,16 @@
    ],
    "attempts": 0,
    "done": true
+  },
+  "2026-11-25-slot01-retribuzioni": {
+   "ids": [
+    "2125506174069944765"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-25": 2
+  "2026-11-25": 3
  }
 }
