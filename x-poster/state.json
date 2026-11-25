@@ -616,9 +616,27 @@
    ],
    "attempts": 0,
    "done": true
+  },
+  "2026-11-24-slot03-mito-iva": {
+   "failed": "troppo in ritardo, saltato",
+   "ids": []
+  },
+  "2026-11-24-slot04-domanda": {
+   "ids": [
+    "2125379937586839735"
+   ],
+   "attempts": 0,
+   "done": true
+  },
+  "2026-11-24-slot05-complotto-istat": {
+   "ids": [
+    "2125379948244615624"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-24": 1
+  "2026-11-25": 2
  }
 }
