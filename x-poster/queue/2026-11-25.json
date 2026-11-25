@@ -1,0 +1,62 @@
+[
+ {
+  "id": "2026-11-25-slot01-retribuzioni",
+  "when": "2026-11-25T09:00:00+01:00",
+  "images": [
+   "img/2026-11-25-slot01.png"
+  ],
+  "text": "Istat: a settembre 2026 le retribuzioni contrattuali orarie salgono del 2,5% sul 2025. Circa 2,5 milioni di dipendenti attendono il rinnovo del contratto, in media da 20,8 mesi. Crescita sotto l'inflazione per il secondo trimestre di fila.\nFonte: Istat (30/10/2026)"
+ },
+ {
+  "id": "2026-11-25-slot02-mutuo-durata",
+  "when": "2026-11-25T13:00:00+01:00",
+  "images": [
+   "img/2026-11-25-slot02.png"
+  ],
+  "text": "Mutuo da 150.000 € al 3%: in 20 anni la rata è 831,90 €, in 30 anni 632,41 €. Sono 199,49 € in meno al mese, ma gli interessi salgono da 49.655 € a 77.666 €, cioè 28.011 € in più.\n\nEsempio calcolato, tasso ipotetico. Informazione generale, non consulenza."
+ },
+ {
+  "id": "2026-11-25-slot03-regola72",
+  "when": "2026-11-25T17:00:00+01:00",
+  "images": [
+   "img/2026-11-25-slot03.png"
+  ],
+  "text": "Regola del 72: dividi 72 per un tasso annuo e ottieni in quanti anni una somma raddoppia (o un prezzo raddoppia). Al 3% sono circa 24 anni, al 6% circa 12. Ti spiego come usarla in 5 post.\nEsempi ipotetici, non consulenza.",
+  "thread": [
+   {
+    "text": "Come funziona: 72 diviso il tasso. Al 3% fa 24, e il calcolo esatto dà 23,45 anni. Al 6% fa 12, esatto 11,90. All'8% fa 9, esatto 9,01. È un'approssimazione, ma per i tassi tra 2% e 12% è comoda e abbastanza precisa.",
+    "images": []
+   },
+   {
+    "text": "Esempio: 10.000 € al 3% annuo composto, ipotetico. Dopo 24 anni diventano 20.327,94 €. Non è una promessa di rendimento: nei mercati i rendimenti variano e si può perdere. Serve solo a capire la scala del tempo.",
+    "images": []
+   },
+   {
+    "text": "Funziona anche con i prezzi. Se l'inflazione restasse al 5,5% (dato Istat di ottobre 2026) per anni, 72 diviso 5,5 fa circa 13 anni: i prezzi raddoppierebbero e 100 € di oggi ne varrebbero circa 50. Ipotesi di scuola.",
+    "images": []
+   },
+   {
+    "text": "Il limite: l'inflazione non resta ferma, e i rendimenti nemmeno. La regola dà un ordine di grandezza, non una previsione. Informazione generale, non consulenza.",
+    "images": []
+   },
+   {
+    "text": "Prova tu: quanto fa 72 diviso 4? E 72 diviso 9? Scrivi la risposta nei commenti, poi dimmi se la regola ti sembra più utile per i risparmi o per i prezzi.",
+    "images": []
+   }
+  ]
+ },
+ {
+  "id": "2026-11-25-slot04-domanda",
+  "when": "2026-11-25T20:00:00+01:00",
+  "images": [],
+  "text": "Domanda semplice: prima di comprare qualcosa sopra i 100 €, aspetti almeno 24 ore oppure se ti piace lo prendi subito? Racconta l'ultimo acquisto che hai fatto d'impulso."
+ },
+ {
+  "id": "2026-11-25-slot05-complotto-contributi",
+  "when": "2026-11-25T22:00:00+01:00",
+  "images": [
+   "img/2026-11-25-slot05.png"
+  ],
+  "text": "COMPLOTTO DEL GIORNO: \"i contributi che versi non sono tuoi\". Capisco perché circola. Verdetto: MANCA IL CONTESTO. L'aliquota pensionistica dei dipendenti è 33%, ma la pensione si calcola sul tuo montante contributivo per un coefficiente (L. 335/1995).\nFonte: INPS"
+ }
+]

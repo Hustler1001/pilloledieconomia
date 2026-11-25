@@ -94,3 +94,8 @@ Una riga per post: data · tema · numero/fonte. Non ripetere lo stesso tema pri
 - 2026-11-24 · Mito IVA 22% = 22% del prezzo · 122 € → IVA 22 €, 18,03%; su 1.000 € = 180,33 € · calcolato
 - 2026-11-24 · Domanda ai lettori: IVA nel prezzo, conto o solo totale · nessun dato
 - 2026-11-24 · Complotto del giorno: Istat trucca l'inflazione · MANCA IL CONTESTO, 29 mln quotazioni/mese, 80 comuni 84% popolazione, 531 aggregati · Istat paniere 2026
+- 2026-11-25 · Retribuzioni contrattuali sett. 2026 · +2,5% a/a, 2,5 mln in attesa di rinnovo, 20,8 mesi, sotto inflazione 2º trim. · Istat (30/10/2026)
+- 2026-11-25 · Mutuo 150.000 € 3% 20 vs 30 anni · rata 831,90 vs 632,41 €, interessi 49.655 vs 77.666 € (+28.011) · calcolato, ipotetico
+- 2026-11-25 · Thread regola del 72 · 3% 23,45 anni, 6% 11,90, 10.000 € → 20.327,94 € in 24 anni, inflazione 5,5% ~13 anni · Istat + calcolato, ipotetico
+- 2026-11-25 · Domanda ai lettori: acquisti sopra 100 € aspetti 24 ore · nessun dato
+- 2026-11-25 · Complotto del giorno: i contributi versati non sono tuoi · MANCA IL CONTESTO, aliquota IVS 33%, pensione = montante x coefficiente · INPS, L. 335/1995 art. 1 c. 6
