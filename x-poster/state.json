@@ -657,9 +657,20 @@
    ],
    "attempts": 0,
    "done": true
+  },
+  "2026-11-25-slot04-domanda": {
+   "failed": "troppo in ritardo, saltato",
+   "ids": []
+  },
+  "2026-11-25-slot05-complotto-contributi": {
+   "ids": [
+    "2125771296264921548"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-25": 4
+  "2026-11-26": 1
  }
 }
