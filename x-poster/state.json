@@ -668,9 +668,16 @@
    ],
    "attempts": 0,
    "done": true
+  },
+  "2026-11-28-slot01-bce-aspettative": {
+   "ids": [
+    "2126633644013851127"
+   ],
+   "attempts": 0,
+   "done": true
   }
  },
  "daily": {
-  "2026-11-26": 1
+  "2026-11-28": 1
  }
 }
