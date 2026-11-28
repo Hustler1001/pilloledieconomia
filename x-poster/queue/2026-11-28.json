@@ -1,0 +1,40 @@
+[
+ {
+  "id": "2026-11-28-slot01-bce-aspettative",
+  "when": "2026-11-28T09:00:00+01:00",
+  "images": [
+   "img/2026-11-28-slot01.png"
+  ],
+  "text": "Area euro, ottobre: secondo il sondaggio BCE i consumatori si aspettano il 3,5% di inflazione tra 12 mesi (a settembre 3,1%). Quella percepita nell'ultimo anno sale al 4,1% dal 3,6%. Reddito atteso: solo +0,6%.\nInflazione: valore mediano. Fonte: BCE (27/11/2026)"
+ },
+ {
+  "id": "2026-11-28-slot02-luci-natale",
+  "when": "2026-11-28T13:00:00+01:00",
+  "images": [
+   "img/2026-11-28-slot02.png"
+  ],
+  "text": "Luci di Natale, 8 ore al giorno per 40 giorni. Con 10 watt di LED consumi 3,2 kWh: 0,96 €. Con una vecchia catena da 100 watt sono 32 kWh: 9,60 €. I watt sono scritti sulla scatola, guardali.\nEsempio calcolato a 0,30 €/kWh, prezzo ipotetico."
+ },
+ {
+  "id": "2026-11-28-slot03-mito-estinzione",
+  "when": "2026-11-28T17:00:00+01:00",
+  "images": [
+   "img/2026-11-28-slot03.png"
+  ],
+  "text": "Mito: \"se chiudo prima il prestito, pago comunque tutti gli interessi\". Falso. 8.000 € in 48 mesi, TAN 8% ipotetico, chiusura dopo 24 rate: eviti 369 € di interessi, con indennizzo massimo di 43 €. Restano circa 326 € in tasca.\nFonte: Banca d'Italia"
+ },
+ {
+  "id": "2026-11-28-slot04-domanda",
+  "when": "2026-11-28T20:00:00+01:00",
+  "images": [],
+  "text": "Il primo stipendio (o la prima paghetta) che ricordi: in cosa è finito? Niente cifre, basta l'acquisto. Valgono anche quelli che oggi difenderesti con molta fatica."
+ },
+ {
+  "id": "2026-11-28-slot05-complotto-oro",
+  "when": "2026-11-28T22:00:00+01:00",
+  "images": [
+   "img/2026-11-28-slot05.png"
+  ],
+  "text": "COMPLOTTO DEL GIORNO: \"l'oro italiano è sparito\". Vero o falso? FALSA. Sono 2.452 tonnellate: 1.100 in Italia (44,86%), 1.061,5 negli USA, il resto tra Svizzera e Regno Unito. Il dubbio è comprensibile, oltre metà è all'estero: lontano, non svanito.\nFonte: Banca d'Italia"
+ }
+]

@@ -99,3 +99,8 @@ Una riga per post: data · tema · numero/fonte. Non ripetere lo stesso tema pri
 - 2026-11-25 · Thread regola del 72 · 3% 23,45 anni, 6% 11,90, 10.000 € → 20.327,94 € in 24 anni, inflazione 5,5% ~13 anni · Istat + calcolato, ipotetico
 - 2026-11-25 · Domanda ai lettori: acquisti sopra 100 € aspetti 24 ore · nessun dato
 - 2026-11-25 · Complotto del giorno: i contributi versati non sono tuoi · MANCA IL CONTESTO, aliquota IVS 33%, pensione = montante x coefficiente · INPS, L. 335/1995 art. 1 c. 6
+- 2026-11-28 · Aspettative inflazione area euro ottobre 2026 · 3,5% a 12 mesi (da 3,1%), percepita 4,1% (da 3,6%), reddito atteso +0,6% · BCE CES (27/11/2026)
+- 2026-11-28 · Luci di Natale 8 ore x 40 giorni · 10 W = 0,96 €, 100 W = 9,60 € (0,30 €/kWh ipotetico) · calcolato
+- 2026-11-28 · Mito estinzione anticipata prestito · 8.000 € 48 mesi TAN 8%, dopo 24 rate: interessi evitati 369 €, indennizzo max 43 €, netto ~326 € · Banca d'Italia + calcolato, ipotetico
+- 2026-11-28 · Domanda ai lettori: primo stipendio o paghetta · nessun dato
+- 2026-11-28 · Complotto del giorno: l'oro italiano è sparito · FALSA, 2.452 t, 1.100 in Italia (44,86%), 1.061,5 USA · Banca d'Italia
